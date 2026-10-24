@@ -13,6 +13,7 @@
   --green: #2F6B52;
   --green-bg: #EDF5F1;
   --green-border: #D2E5DB;
+  --gutter: 40px;
 }
 
 body {
@@ -44,72 +45,30 @@ a:hover { color: var(--accent); }
   }
 }
 
-/* Barra superior de modo escritorio/móvil */
-.devicebar {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 16px;
-  padding: 9px 16px;
-  font-family: 'IBM Plex Mono', monospace;
-  font-size: 11px;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--muted);
-  background: var(--bg);
-  position: sticky;
-  top: 0;
-  z-index: 30;
-}
-
-.devicebar .btns { display: flex; gap: 6px; }
-
-.devicebar button {
-  font: inherit;
-  letter-spacing: inherit;
-  text-transform: inherit;
-  padding: 6px 12px;
-  border: 1px solid var(--border-strong);
-  background: transparent;
-  color: var(--muted);
-  cursor: pointer;
-  border-radius: 2px;
-}
-
-.devicebar button:hover,
-.devicebar button.active {
-  border-color: var(--ink);
-  color: var(--ink);
-}
-
 /* Shell principal */
 .shell {
   width: 100%;
-  max-width: 1120px;
+  max-width: 1280px;
   background: var(--shell);
   min-height: 100vh;
   position: relative;
   border-left: 1px solid var(--border);
   border-right: 1px solid var(--border);
-  transition: max-width 0.2s ease;
 }
-
-.shell.mobile { max-width: 412px; }
 
 main { animation: rise 0.4s ease-out both; }
 
 /* Header */
 header.site {
   position: sticky;
-  top: 37px;
+  top: 0;
   z-index: 20;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   gap: 12px 32px;
-  padding: 18px 40px;
+  padding: 18px var(--gutter);
   background: rgba(255,255,255,0.94);
   backdrop-filter: blur(8px);
   border-bottom: 1px solid var(--border);
@@ -153,7 +112,7 @@ nav.main a.cta {
 nav.main a.cta:hover { background: var(--accent); color: #FFFFFF; }
 
 /* Secciones genéricas */
-main section { padding: 0 40px; }
+main section { padding: 0 var(--gutter); }
 
 .eyebrow {
   font-family: 'IBM Plex Mono', monospace;
@@ -347,7 +306,7 @@ h1 {
 /* Grid de miembros (home) */
 .member-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
   gap: 1px;
   background: var(--border);
   border: 1px solid var(--border);
@@ -399,7 +358,7 @@ h1 {
   grid-template-columns: 100px 1fr auto;
   gap: 24px;
   align-items: center;
-  padding: 28px 40px;
+  padding: 28px var(--gutter);
   border-bottom: 1px solid var(--border);
   transition: background 0.16s ease;
 }
@@ -440,7 +399,7 @@ h1 {
   grid-template-columns: auto 1fr auto;
   gap: 20px;
   align-items: center;
-  padding: 24px 40px;
+  padding: 24px var(--gutter);
   border-bottom: 1px solid var(--border);
   transition: background 0.16s ease;
 }
@@ -503,7 +462,8 @@ h1 {
 }
 
 .stat-grid {
-  padding: 0 40px 36px;
+  margin: 0 var(--gutter) 36px;
+  padding: 0;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   gap: 1px;
@@ -606,7 +566,7 @@ h1 {
 }
 
 .profile-grid {
-  padding: 40px;
+  padding: 40px var(--gutter);
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 40px;
@@ -680,7 +640,7 @@ h1 {
   display: grid;
   grid-template-columns: 100px 1fr;
   gap: 24px;
-  padding: 28px 40px;
+  padding: 28px var(--gutter);
   border-bottom: 1px solid var(--border);
 }
 
@@ -763,10 +723,66 @@ footer.site {
   gap: 12px 24px;
   justify-content: space-between;
   align-items: center;
-  padding: 26px 40px;
+  padding: 26px var(--gutter);
   border-top: 1px solid var(--border);
   font-family: 'IBM Plex Mono', monospace;
   font-size: 11.5px;
   letter-spacing: 0.05em;
   color: var(--muted);
+}
+
+/* Responsive: tablet y móvil */
+@media (max-width: 860px) {
+  :root { --gutter: 28px; }
+
+  .hero-photo { height: 260px; }
+}
+
+@media (max-width: 640px) {
+  :root { --gutter: 20px; }
+
+  header.site { padding-top: 14px; padding-bottom: 14px; }
+
+  nav.main { width: 100%; justify-content: space-between; gap: 12px; }
+  nav.main a.cta { padding: 8px 12px; }
+
+  .lead,
+  .case-lead,
+  .profile-bio { font-size: 16px; }
+
+  .stat-strip { margin-top: 40px; }
+
+  .case-feature img { height: 200px; }
+  .case-feature .body { padding: 20px; }
+  .case-feature h3 { font-size: 22px; }
+
+  .hero-photo { height: 200px; }
+
+  /* Listado de proyectos: año y estado arriba, contenido abajo */
+  .list-row {
+    grid-template-columns: 1fr auto;
+    grid-template-areas: "anio estado" "body body";
+    gap: 10px 16px;
+    padding: 22px var(--gutter);
+  }
+  .list-row .anio { grid-area: anio; }
+  .list-row .estado { grid-area: estado; }
+  .list-row > span:nth-child(2) { grid-area: body; }
+
+  .team-row { gap: 16px; padding: 20px var(--gutter); }
+  .team-row .avatar,
+  .team-row .pin { width: 44px; height: 44px; }
+  .team-row .link { display: none; }
+
+  .profile-head .who { gap: 16px; }
+  .profile-head .who > div { min-width: 0; }
+  .profile-avatar { width: 64px; height: 64px; }
+  .profile-grid { padding-top: 32px; padding-bottom: 32px; }
+
+  .exp-row,
+  .phase-row { grid-template-columns: 1fr; gap: 6px; }
+  .phase-row { padding: 22px var(--gutter); }
+
+  .datos-list,
+  .linkedin-link { overflow-wrap: anywhere; }
 }

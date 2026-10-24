@@ -1,17 +1,23 @@
 const MIEMBROS = [
   {
     id: 0,
-    nombre: '[Nombre 01]',
-    rol: 'Desarrollo front-end',
-    bio: 'Trabaja en la interfaz: lo que el usuario ve y toca. En Psicología con Bel armó el flujo completo de reserva de horas.',
-    correo: 'nombre01@pancm.cl',
+    nombre: 'Héctor Olivares Rifo',
+    foto: 'src/assets/hector-olivares.webp',
+    rol: 'Web y Software Developer',
+    bio: 'Ingeniero en Computación e Informática (UNAB). En Psicología con Bel se encargó del desarrollo front-end.',
+    correo: 'h.olivaresrifo@gmail.com',
     ubicacion: 'Santiago, Chile',
+    ingles: 'Inglés intermedio alto (B2)',
     disponibilidad: 'Disponible para trabajos',
-    aporte: 'Interfaz pública y flujo de reserva de horas.',
-    stack: ['React 19', 'TypeScript', 'Tailwind', 'Vite', 'Figma'],
+    linkedin: 'https://www.linkedin.com/in/h%C3%A9ctor-enrique-olivares-rifo/',
+    linkedinLabel: 'linkedin.com/in/héctor-enrique-olivares-rifo',
+    aporte: 'Desarrollo front-end.',
+    stack: ['React', 'TypeScript', 'Node.js', 'Electron', 'WebSockets', 'Tailwind', 'PHP', 'Excel', 'Power BI'],
     experiencia: [
-      { anio: '2025', titulo: 'Psicología con Bel', detalle: 'Interfaz pública en React + Tailwind y el selector de horarios.' },
-      { anio: '2023—2025', titulo: '[Estudios o trabajo previo]', detalle: 'Reemplaza esto con tu experiencia real.' }
+      { anio: '2026', titulo: 'Psicología con Bel', detalle: 'Front-end developer con React/Vite/Tailwind, Diseñador UI/UX.' },
+      { anio: '2026', titulo: 'I Wanna Coop', detalle: 'Proyecto personal. App de escritorio en Electron y Node.js para jugar fangames en cooperativo o carrera online: lectura de memoria del juego, servidor relay con WebSockets y overlay de jugadores.' },
+      { anio: 'Oct—Dic 2025', titulo: 'Superintendencia de Pensiones', detalle: 'Practicante como analista de datos, dashboards en Power BI, código DAX, Python, Excel y Word.' },
+      { anio: 'Abr—Jun 2024', titulo: 'Club Providencia', detalle: 'Practicante como analista de base de datos. Manejo de bases de datos SQL, MySQL Workbench, TablePlus, Scripts con PHP.' }
     ]
   },
   {
@@ -44,48 +50,16 @@ const MIEMBROS = [
     aporte: 'Investigación con la clienta y diseño de pantallas.',
     stack: ['Figma', 'Prototipado', 'Investigación', 'React', 'Tailwind'],
     experiencia: [
-      { anio: '2025', titulo: 'Psicología con Bel', detalle: 'Definición del flujo y diseño de las pantallas.' },
-      { anio: '2023—2025', titulo: '[Estudios o trabajo previo]', detalle: 'Reemplaza esto con tu experiencia real.' }
-    ]
-  },
-  {
-    id: 3,
-    nombre: '[Nombre 04]',
-    rol: 'Coordinación y pruebas',
-    bio: 'Coordina los plazos con quien encarga el proyecto y revisa que todo funcione antes de publicar.',
-    correo: 'nombre04@pancm.cl',
-    ubicacion: 'Santiago, Chile',
-    disponibilidad: 'Disponible para trabajos',
-    aporte: 'Coordinación del proyecto y pruebas previas al lanzamiento.',
-    stack: ['Git', 'GitHub Actions', 'Playwright', 'Soporte'],
-    experiencia: [
-      { anio: '2025', titulo: 'Psicología con Bel', detalle: 'Coordinación del proyecto y pruebas previas al lanzamiento.' },
+      { anio: '2026', titulo: 'Psicología con Bel', detalle: 'Definición del flujo y diseño de las pantallas.' },
       { anio: '2023—2025', titulo: '[Estudios o trabajo previo]', detalle: 'Reemplaza esto con tu experiencia real.' }
     ]
   }
 ];
 
 const PROYECTOS = [
-  { anio: '2025', nombre: 'Psicología con Bel', estado: 'En producción', resumen: 'Reserva de horas para pacientes y panel privado de agenda para la profesional.', href: 'proyecto.html' },
+  { anio: '2026', nombre: 'Psicología con Bel', estado: 'En producción', resumen: 'Reserva de horas para pacientes y panel privado de agenda para la profesional.', href: 'proyecto.html' },
   { anio: '2026', nombre: 'Próximo encargo', estado: 'En preparación', resumen: 'Espacio reservado para el siguiente proyecto del grupo.', href: 'proyecto.html' }
 ];
-
-function initDeviceToggle() {
-  const shell = document.querySelector('.shell');
-  const btnDesktop = document.querySelector('[data-device="desktop"]');
-  const btnMobile = document.querySelector('[data-device="mobile"]');
-  if (!shell || !btnDesktop || !btnMobile) return;
-
-  const apply = (device) => {
-    shell.classList.toggle('mobile', device === 'mobile');
-    btnDesktop.classList.toggle('active', device === 'desktop');
-    btnMobile.classList.toggle('active', device === 'mobile');
-  };
-
-  btnDesktop.addEventListener('click', () => apply('desktop'));
-  btnMobile.addEventListener('click', () => apply('mobile'));
-  apply('desktop');
-}
 
 function avatarMarkup(m, cls) {
   return m.foto
@@ -182,7 +156,7 @@ function renderProfile() {
 
   const datosEl = document.querySelector('[data-profile-datos]');
   if (datosEl) {
-    datosEl.innerHTML = `${m.correo}<br />${m.ubicacion}<br />${m.disponibilidad}`;
+    datosEl.innerHTML = [m.correo, m.ubicacion, m.ingles, m.disponibilidad].filter(Boolean).join('<br />');
   }
 
   const linkedinEl = document.querySelector('[data-profile-linkedin]');
@@ -200,7 +174,6 @@ function renderProfile() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  initDeviceToggle();
   renderMemberGrid(document.querySelector('[data-member-grid]'));
   renderTeamList(document.querySelector('[data-team-list]'));
   renderProjectList(document.querySelector('[data-project-list]'));
