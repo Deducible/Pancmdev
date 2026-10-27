@@ -41,17 +41,20 @@ const MIEMBROS = [
   },
   {
     id: 2,
-    nombre: '[Nombre 03]',
-    rol: 'Diseño de producto',
-    bio: 'Define qué necesita el proyecto antes de programarlo: conversaciones con el cliente, flujos y pantallas.',
-    correo: 'nombre03@pancm.cl',
+    nombre: 'Tomás González',
+    rol: 'Desarrollo full-stack',
+    bio: 'Ingeniero en Informática con Especialización de "Ciencia de Datos" (DUOC UC)',
+    correo: 'tomas.gonzalezr04@gmail.com',
     ubicacion: 'Santiago, Chile',
+    ingles: 'Inglés intermedio alto (B2)',
     disponibilidad: 'Disponible para trabajos',
-    aporte: 'Investigación con la clienta y diseño de pantallas.',
-    stack: ['Figma', 'Prototipado', 'Investigación', 'React', 'Tailwind'],
+    linkedin: 'https://www.linkedin.com/in/tomás-gonzález-rodríguez-063511252',
+    linkedinLabel: 'linkedin.com/in/tomás-gonzález-rodríguez-063511252',
+    aporte: 'Desarrollo full-stack.',
+    stack: ['React', 'Node.js', 'TypeScript', 'Express', 'Prisma', 'PostgreSQL', 'Python', 'Tailwind', 'Angular', 'Ionic', 'Git'],
     experiencia: [
-      { anio: '2026', titulo: 'Psicología con Bel', detalle: 'Definición del flujo y diseño de las pantallas.' },
-      { anio: '2023—2025', titulo: '[Estudios o trabajo previo]', detalle: 'Reemplaza esto con tu experiencia real.' }
+      { anio: '2026', titulo: 'CRM Clinico', detalle: 'Frontend en React/Vite/Tailwind, API REST con Express y Prisma, JWT + verificación 2FA, almacenamiento de documentos en Cloudflare R2, CI/CD con GitHub Actions y PostgreSQL en Neon.' },
+      { anio: 'Dic 2025—Feb2026', titulo: 'Rymak', detalle: 'Práctica analista de datos: Dashboards e informes con Power BI y Excel.' }
     ]
   }
 ];
