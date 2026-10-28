@@ -4,7 +4,7 @@ const MIEMBROS = [
     nombre: 'Héctor Olivares Rifo',
     foto: 'src/assets/hector-olivares.webp',
     rol: 'Web y Software Developer',
-    bio: 'Ingeniero en Computación e Informática (UNAB). En Psicología con Bel se encargó del desarrollo front-end.',
+    bio: 'Ingeniero en Computación e Informática (UNAB). En el Centro de Psicología Clínica se encargó del desarrollo front-end.',
     correo: 'h.olivaresrifo@gmail.com',
     ubicacion: 'Santiago, Chile',
     ingles: 'Inglés intermedio alto (B2)',
@@ -14,7 +14,7 @@ const MIEMBROS = [
     aporte: 'Desarrollo front-end.',
     stack: ['React', 'TypeScript', 'Node.js', 'Electron', 'WebSockets', 'Tailwind', 'PHP', 'Excel', 'Power BI'],
     experiencia: [
-      { anio: '2026', titulo: 'Psicología con Bel', detalle: 'Front-end developer con React/Vite/Tailwind, Diseñador UI/UX.' },
+      { anio: '2026', titulo: 'Centro de Psicología Clínica', detalle: 'Front-end developer con React/Vite/Tailwind, Diseñador UI/UX.' },
       { anio: '2026', titulo: 'I Wanna Coop', detalle: 'Proyecto personal. App de escritorio en Electron y Node.js para jugar fangames en cooperativo o carrera online: lectura de memoria del juego, servidor relay con WebSockets y overlay de jugadores.' },
       { anio: 'Oct—Dic 2025', titulo: 'Superintendencia de Pensiones', detalle: 'Practicante como analista de datos, dashboards en Power BI, código DAX, Python, Excel y Word.' },
       { anio: 'Abr—Jun 2024', titulo: 'Club Providencia', detalle: 'Practicante como analista de base de datos. Manejo de bases de datos SQL, MySQL Workbench, TablePlus, Scripts con PHP.' }
@@ -25,7 +25,7 @@ const MIEMBROS = [
     nombre: 'Bastián Orellana',
     foto: 'src/assets/bastian-orellana.png',
     rol: 'Desarrollo full-stack',
-    bio: 'Ingeniero en Informática (DUOC UC). Construyó el frontend y la API de Psicología con Bel, y se encargó de seguridad, autenticación y el pipeline de despliegue.',
+    bio: 'Ingeniero en Informática (DUOC UC). Construyó el frontend y la API del Centro de Psicología Clínica, y se encargó de seguridad, autenticación y el pipeline de despliegue.',
     correo: 'b.orellana.cv@gmail.com',
     ubicacion: 'Puente Alto, Santiago',
     disponibilidad: 'Disponible para trabajos',
@@ -34,7 +34,7 @@ const MIEMBROS = [
     aporte: 'Frontend en React, API en Express/Prisma, autenticación con JWT y 2FA, y CI/CD con GitHub Actions.',
     stack: ['React', 'TypeScript', 'Node.js', 'Express', 'PostgreSQL', 'Prisma', 'JWT', 'GitHub Actions'],
     experiencia: [
-      { anio: '2026', titulo: 'Psicología con Bel', detalle: 'Frontend en React/Vite/Tailwind, API REST con Express y Prisma, JWT + verificación en dos pasos, CI/CD con GitHub Actions y migración a Neon.' },
+      { anio: '2026', titulo: 'Centro de Psicología Clínica', detalle: 'Frontend en React/Vite/Tailwind, API REST con Express y Prisma, JWT + verificación en dos pasos, CI/CD con GitHub Actions y migración a Neon.' },
       { anio: 'Jul—Dic 2024', titulo: 'IGN.Tattoo', detalle: 'Proyecto de título: app móvil (React Native/Expo) y plataforma web para estudios de tatuajes, con API en Node/Express sobre PostgreSQL.' },
       { anio: 'Dic 2024—Feb 2025', titulo: 'Aplicaciones Computacionales SPA (ACL TI)', detalle: 'Práctica full-stack: dashboards con Next.js y Prisma, documentación de API con Swagger.' }
     ]
@@ -60,7 +60,7 @@ const MIEMBROS = [
 ];
 
 const PROYECTOS = [
-  { anio: '2026', nombre: 'Psicología con Bel', estado: 'En producción', resumen: 'Reserva de horas para pacientes y panel privado de agenda para la profesional.', href: 'proyecto.html' },
+  { anio: '2026', nombre: 'Centro de Psicología Clínica', estado: 'Demo en línea', resumen: 'Sitio público con reserva de horas, portal del paciente y panel del profesional. La demo usa datos ficticios.', href: 'proyecto.html' },
   { anio: '2026', nombre: 'Próximo encargo', estado: 'En preparación', resumen: 'Espacio reservado para el siguiente proyecto del grupo.', href: 'proyecto.html' }
 ];
 
