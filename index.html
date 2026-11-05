@@ -4,18 +4,24 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="robots" content="noindex, nofollow" />
-<title>PanCM — desarrollo de software</title>
+<script src="theme.js?v=3"></script>
+<link rel="icon" type="image/png" sizes="16x16" href="src/assets/favicon-16.png" />
+<link rel="icon" type="image/png" sizes="32x32" href="src/assets/favicon-32.png" />
+<link rel="icon" type="image/png" sizes="48x48" href="src/assets/favicon-48.png" />
+<link rel="apple-touch-icon" href="src/assets/apple-touch-icon.png" />
+<title>PanCMdev — desarrollo de software</title>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@500;600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="styles.css" />
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css?v=3" />
 </head>
 <body>
 
   <div class="shell">
     <header class="site">
-      <a href="index.html" class="logo">
-        <span class="name">PanCM</span>
+      <a href="index.html" class="logo" aria-label="PanCMdev, inicio">
+        <img class="logo-img only-light" src="src/assets/pancm-logo.webp" alt="" width="68" height="38" />
+        <img class="logo-img only-dark" src="src/assets/pancm-logo-oscuro.webp" alt="" width="68" height="38" />
         <span class="tag">Desarrollo de software</span>
       </a>
       <nav class="main">
@@ -23,49 +29,78 @@
         <a href="equipo.html">Equipo</a>
         <a href="nosotros.html">Metodología</a>
         <a href="contacto.html" class="cta">Contacto</a>
+        <button type="button" class="theme-toggle" data-theme-toggle aria-label="Cambiar a tema oscuro">
+          <svg class="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+          <svg class="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        </button>
       </nav>
+      <div class="rail" aria-hidden="true"><i></i></div>
     </header>
 
     <main>
-      <section style="padding:80px var(--gutter) 56px;border-bottom:1px solid var(--border)">
-        <div class="hero-grid">
+      <section class="hero">
         <div>
-        <div class="eyebrow">Grupo de desarrollo · Chile</div>
-        <h1>Software a medida para negocios que aún se administran a mano.</h1>
-        <p class="lead">Diseñamos y construimos sitios y sistemas de gestión completos: la cara pública que ve el cliente y el panel privado con el que se opera el negocio. Cada integrante mantiene además su propio perfil profesional.</p>
-        <div class="actions">
-          <a href="proyecto.html" class="btn">Ver caso de estudio</a>
-          <a href="equipo.html" class="btn-outline">Conocer al equipo</a>
-        </div>
-        </div>
-        <div class="stat-strip">
-          <div class="cell">
-            <div class="label">Proyectos publicados</div>
-            <div class="value">01</div>
-          </div>
-          <div class="cell">
-            <div class="label">Integrantes</div>
-            <div class="value">03</div>
-          </div>
-          <div class="cell">
-            <div class="label">Stack principal</div>
-            <div class="value text">React · Node · PostgreSQL</div>
-          </div>
-          <div class="cell">
-            <div class="label">Disponibilidad</div>
-            <div class="value text">Abierta para nuevos encargos</div>
+          <div class="eyebrow" data-rise>Desarrollo de software · Chile</div>
+          <h1 data-rise style="--d:.08s">Tu negocio tiene dos caras. Construimos las dos.</h1>
+          <p class="lead" data-rise style="--d:.16s">El sitio donde tus clientes reservan y el panel privado donde tú administras todo. Una sola agenda, un solo equipo, sin planillas ni mensajes sueltos.</p>
+          <div class="actions" data-rise style="--d:.24s">
+            <a href="proyecto.html" class="btn">Ver caso de estudio</a>
+            <a href="equipo.html" class="btn-outline">Conocer al equipo</a>
           </div>
         </div>
+        <div class="brand-panel" data-rise style="--d:.2s">
+          <img class="only-light" src="src/assets/pancm-logo.webp" alt="Logo de PanCMdev" width="900" height="504" />
+          <img class="only-dark" src="src/assets/pancm-logo-oscuro.webp" alt="" width="900" height="504" />
         </div>
       </section>
 
-      <section style="padding:56px var(--gutter);border-bottom:1px solid var(--border)">
+      <section class="section" style="padding-top:8px" data-reveal>
+        <div class="section-head">
+          <h2>Una agenda, dos caras</h2>
+          <span class="tag">Demo interactiva</span>
+        </div>
+        <div class="demo" data-demo>
+          <div class="demo-side demo-pub">
+            <div class="demo-head">
+              <span class="demo-tag">Cara pública</span>
+              <span class="demo-hint">Lo que ve tu cliente</span>
+            </div>
+            <div class="demo-title">Reserva tu hora</div>
+            <div>
+              <div class="demo-day">Martes 3 · horarios disponibles</div>
+              <div class="slots" data-slots></div>
+            </div>
+            <p class="demo-msg" data-msg aria-live="polite"></p>
+            <button type="button" class="demo-reset" data-reset hidden>Reiniciar demo</button>
+          </div>
+          <div class="demo-side demo-priv">
+            <div class="demo-head">
+              <span class="demo-tag">Cara privada</span>
+              <span class="demo-hint">Lo que ves tú</span>
+            </div>
+            <div class="demo-title">Agenda del martes 3</div>
+            <div class="agenda" data-agenda></div>
+          </div>
+        </div>
+        <p class="demo-note">Demo ilustrativa del sistema que construimos para el Centro de Psicología Clínica: una hora reservada deja de estar disponible en el mismo instante, por eso no existe la doble reserva.</p>
+      </section>
+
+      <section class="section band" data-reveal>
         <div class="section-head">
           <h2>Caso de estudio</h2>
           <a href="proyectos.html">Todos los proyectos →</a>
         </div>
         <a href="proyecto.html" class="case-feature">
-          <img src="src/assets/centro-psicologia-hero.webp" alt="Barriles oxidados frente al mar al atardecer, imagen de la demo del Centro de Psicología Clínica" style="object-position:center 62%" onerror="this.style.background='#EEF0F2'" />
+          <div class="case-art" role="img" aria-label="Logo del Centro de Psicología Clínica, demo">
+            <div class="case-art-mark">
+              <svg viewBox="0 0 48 48" width="84" height="84" fill="none" aria-hidden="true">
+                <circle cx="19" cy="24" r="12" stroke="currentColor" stroke-width="2.5" />
+                <circle cx="29" cy="24" r="12" stroke="currentColor" stroke-width="2.5" opacity="0.55" />
+              </svg>
+              <p class="case-art-name">Centro de Psicología Clínica</p>
+              <p class="case-art-tag">Demo</p>
+            </div>
+          </div>
           <div class="body">
             <div class="info">
               <div class="meta">2026 · Salud · Plataforma de gestión</div>
@@ -77,7 +112,7 @@
         </a>
       </section>
 
-      <section style="padding:56px var(--gutter)">
+      <section class="section" data-reveal>
         <div class="section-head">
           <h2>Equipo</h2>
           <a href="equipo.html">Ver perfiles completos →</a>
@@ -87,11 +122,15 @@
     </main>
 
     <footer class="site">
-      <span>PanCM · Desarrollo de software · Chile</span>
+      <span class="brand">
+        <img class="only-light" src="src/assets/pancm-logo.webp" alt="" width="46" height="26" />
+        <img class="only-dark" src="src/assets/pancm-logo-oscuro.webp" alt="" width="46" height="26" />
+        PanCMdev · Desarrollo de software · Chile
+      </span>
       <span>hola@pancm.cl</span>
     </footer>
   </div>
 
-  <script src="main.js"></script>
+  <script src="main.js?v=3"></script>
 </body>
 </html>

@@ -4,5 +4,13 @@
   Header set X-Robots-Tag "noindex, nofollow"
 </IfModule>
 
+# Que el navegador revise si hay una versión nueva de las páginas, estilos y
+# scripts antes de usar su copia guardada, así los cambios se ven al subirlos.
+<IfModule mod_headers.c>
+  <FilesMatch "\.(html|css|js|svg)$">
+    Header set Cache-Control "no-cache"
+  </FilesMatch>
+</IfModule>
+
 # No listar carpetas
 Options -Indexes
