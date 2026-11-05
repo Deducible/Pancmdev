@@ -3,7 +3,7 @@ const MIEMBROS = [
     id: 0,
     nombre: 'Héctor Olivares Rifo',
     foto: 'src/assets/hector-olivares.webp',
-    rol: 'Web y Software Developer',
+    rol: 'Web y Software Developer Full-Stack',
     bio: 'Ingeniero en Computación e Informática (UNAB). En el Centro de Psicología Clínica se encargó del desarrollo front-end.',
     correo: 'h.olivaresrifo@gmail.com',
     ubicacion: 'Santiago, Chile',
@@ -12,10 +12,11 @@ const MIEMBROS = [
     linkedin: 'https://www.linkedin.com/in/h%C3%A9ctor-enrique-olivares-rifo/',
     linkedinLabel: 'linkedin.com/in/héctor-enrique-olivares-rifo',
     aporte: 'Desarrollo front-end.',
-    stack: ['React', 'TypeScript', 'Node.js', 'Electron', 'WebSockets', 'Tailwind', 'PHP', 'Excel', 'Power BI'],
+    stack: ['React', 'TypeScript', 'Node.js', 'Electron', 'WebSockets', 'Tailwind', 'PHP', 'Excel', 'Power BI', 'Claude Code', 'Rust'],
     experiencia: [
       { anio: '2026', titulo: 'Centro de Psicología Clínica', detalle: 'Front-end developer con React/Vite/Tailwind, Diseñador UI/UX.' },
-      { anio: '2026', titulo: 'I Wanna Coop', detalle: 'Proyecto personal. App de escritorio en Electron y Node.js para jugar fangames en cooperativo o carrera online: lectura de memoria del juego, servidor relay con WebSockets y overlay de jugadores.' },
+      { anio: 'Oct 2026', titulo: 'I Wanna Coop', detalle: 'Proyecto personal. App de escritorio en Electron y Node.js, reescrito en Rust para poder jugar fangames en cooperativo o carrera online: lectura de memoria del juego, servidor relay con WebSockets y overlay de jugadores.' },
+      { anio: 'Feb 2026', titulo: 'TDM Webpage', detalle: 'Página web para un torneo de la comunidad TDM, con sistema de bracket, horarios, jugadores, información. Conectados a través de la API oficial de osu!, hecho en Astro y Tailwind.' },
       { anio: 'Oct—Dic 2025', titulo: 'Superintendencia de Pensiones', detalle: 'Practicante como analista de datos, dashboards en Power BI, código DAX, Python, Excel y Word.' },
       { anio: 'Abr—Jun 2024', titulo: 'Club Providencia', detalle: 'Practicante como analista de base de datos. Manejo de bases de datos SQL, MySQL Workbench, TablePlus, Scripts con PHP.' }
     ]
