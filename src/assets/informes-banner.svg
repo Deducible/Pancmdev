@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 520" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="fondo" x1="1" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#17233B"/>
+      <stop offset="1" stop-color="#0B1424"/>
+    </linearGradient>
+    <radialGradient id="brillo" cx="0.35" cy="0.2" r="0.6">
+      <stop offset="0" stop-color="#6486DB" stop-opacity="0.3"/>
+      <stop offset="1" stop-color="#6486DB" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1600" height="520" fill="url(#fondo)"/>
+  <rect width="1600" height="520" fill="url(#brillo)"/>
+  <g transform="translate(700 260) scale(0.62) translate(-515 -675)" fill="none" stroke="#6486DB" stroke-width="4" opacity="0.55">
+    <path d="M340 340 h260 l120 120 v520 a30 30 0 0 1 -30 30 h-350 a30 30 0 0 1 -30 -30 v-610 a30 30 0 0 1 30 -30 z"/>
+    <path d="M600 340 v120 h120"/>
+    <line x1="400" y1="600" x2="660" y2="600"/>
+    <line x1="400" y1="690" x2="660" y2="690"/>
+    <line x1="400" y1="780" x2="560" y2="780"/>
+  </g>
+  <g transform="translate(1010 270) scale(0.8) translate(-760 -1150)" fill="none" stroke="#D2A559" opacity="0.5">
+    <circle cx="760" cy="1150" r="150" stroke-width="4"/>
+    <path d="M705 1150 l40 40 l75 -85" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <circle cx="330" cy="400" r="110" fill="#315E86" opacity="0.25"/>
+  <path d="M0 440 C 400 390, 800 500, 1600 420 L1600 520 L0 520 Z" fill="#315E86" opacity="0.2"/>
+</svg>
