@@ -1,0 +1,56 @@
+name: Desplegar sitio
+
+# Sube el sitio a cPanel (carpeta public_html) cada vez que cambia main.
+# También se puede lanzar a mano desde la pestaña Actions.
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+# Una subida a la vez: si llegan dos cambios seguidos, la segunda espera.
+concurrency:
+  group: desplegar
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+jobs:
+  desplegar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Descargar el código
+        uses: actions/checkout@v4
+
+      - name: Instalar lftp
+        run: sudo apt-get update && sudo apt-get install -y lftp
+
+      # Sube por FTP sobre TLS. No usa --delete a propósito: así nunca borra
+      # lo que cPanel guarda en public_html (.well-known, cgi-bin). Un archivo
+      # que se elimine del repo hay que borrarlo a mano en el servidor.
+      - name: Subir archivos a public_html
+        env:
+          FTP_SERVER: ${{ secrets.FTP_SERVER }}
+          FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
+          FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
+        run: |
+          set -euo pipefail
+          lftp -u "$FTP_USERNAME","$FTP_PASSWORD" "$FTP_SERVER" <<'EOF'
+          set ftp:ssl-force true
+          set ftp:ssl-protect-data true
+          set ssl:verify-certificate yes
+          set net:max-retries 3
+          set net:timeout 20
+          mirror --reverse --verbose --parallel=4 \
+            --exclude-glob .git/ \
+            --exclude-glob .github/ \
+            --exclude-glob .gitignore \
+            --exclude-glob .claude/ \
+            --exclude-glob src/assets/consulta.webp \
+            --exclude-glob src/assets/psicoterapia2.webp \
+            --exclude-glob src/assets/centro-psicologia-hero.webp \
+            --exclude-glob src/assets/centro-psicologia-costa.webp \
+            . /
+          quit
+          EOF
