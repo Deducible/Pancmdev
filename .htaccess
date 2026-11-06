@@ -1,9 +1,3 @@
-# Sitio en construcción: pedir a los buscadores que no lo indexen.
-# Al lanzar de verdad, borrar este bloque (y robots.txt y las etiquetas noindex).
-<IfModule mod_headers.c>
-  Header set X-Robots-Tag "noindex, nofollow"
-</IfModule>
-
 # Una sola versión del sitio: https y sin www. La carpeta .well-known queda
 # fuera para que cPanel pueda validar y renovar el certificado SSL.
 <IfModule mod_rewrite.c>
