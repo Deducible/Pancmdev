@@ -103,6 +103,19 @@ html.theme-anim *::after {
 [data-theme='dark'] .only-light { display: none !important; }
 [data-theme='dark'] .only-dark { display: block !important; }
 
+/* Texto solo para lectores de pantalla */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 @keyframes rise {
   from { opacity: 0; transform: translateY(14px); }
   to { opacity: 1; transform: translateY(0); }
@@ -1018,6 +1031,9 @@ form.contact-form button {
 form.contact-form button:hover { background: var(--btn-hover); }
 [data-theme='dark'] form.contact-form button:hover { color: #0A0B0D; }
 
+form.contact-form .form-msg { margin: 0; font-size: 15px; line-height: 1.55; color: var(--ink-soft); max-width: 56ch; }
+form.contact-form .form-msg:empty { display: none; }
+
 /* Footer */
 footer.site {
   display: flex;
@@ -1035,6 +1051,12 @@ footer.site {
 
 footer.site .brand { display: flex; align-items: center; gap: 12px; }
 footer.site .brand img { height: 26px; width: auto; }
+
+/* Correos como enlace sin cambiar el color del texto que los rodea */
+footer.site a,
+.datos-list a { color: inherit; }
+footer.site a:hover,
+.datos-list a:hover { color: var(--accent); }
 
 /* Responsive: tablet y móvil */
 @media (max-width: 860px) {
