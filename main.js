@@ -1,182 +1,3 @@
-const MIEMBROS = [
-  {
-    id: 0,
-    nombre: 'Héctor Olivares Rifo',
-    foto: 'src/assets/hector-olivares.webp',
-    rol: 'Web y Software Developer Full-Stack',
-    bio: 'Ingeniero en Computación e Informática (UNAB). En el Centro de Psicología Clínica se encargó del desarrollo front-end.',
-    correo: 'h.olivaresrifo@gmail.com',
-    ubicacion: 'Santiago, Chile',
-    ingles: 'Inglés intermedio alto (B2)',
-    disponibilidad: 'Disponible para trabajos',
-    linkedin: 'https://www.linkedin.com/in/h%C3%A9ctor-enrique-olivares-rifo/',
-    linkedinLabel: 'linkedin.com/in/héctor-enrique-olivares-rifo',
-    aporte: 'Desarrollo front-end.',
-    stack: ['React', 'TypeScript', 'Node.js', 'Electron', 'WebSockets', 'Tailwind', 'PHP', 'Excel', 'Power BI', 'Claude Code', 'Rust'],
-    experiencia: [
-      { anio: '2026', titulo: 'Centro de Psicología Clínica', detalle: 'Front-end developer con React/Vite/Tailwind, Diseñador UI/UX.' },
-      { anio: 'Oct 2026', titulo: 'I Wanna Coop', detalle: 'Proyecto personal. App de escritorio en Electron y Node.js, reescrito en Rust para poder jugar fangames en cooperativo o carrera online: lectura de memoria del juego, servidor relay con WebSockets y overlay de jugadores.' },
-      { anio: 'Feb 2026', titulo: 'TDM Webpage', detalle: 'Página web para un torneo de la comunidad TDM, con sistema de bracket, horarios, jugadores, información. Conectados a través de la API oficial de osu!, hecho en Astro y Tailwind.' },
-      { anio: 'Oct—Dic 2025', titulo: 'Superintendencia de Pensiones', detalle: 'Practicante como analista de datos, dashboards en Power BI, código DAX, Python, Excel y Word.' },
-      { anio: 'Abr—Jun 2024', titulo: 'Club Providencia', detalle: 'Practicante como analista de base de datos. Manejo de bases de datos SQL, MySQL Workbench, TablePlus, Scripts con PHP.' }
-    ]
-  },
-  {
-    id: 1,
-    nombre: 'Bastián Orellana',
-    foto: 'src/assets/bastian-orellana.png',
-    rol: 'Desarrollo full-stack',
-    bio: 'Ingeniero en Informática (DUOC UC). Construyó el frontend y la API del Centro de Psicología Clínica, y se encargó de seguridad, autenticación y el pipeline de despliegue.',
-    correo: 'b.orellana.cv@gmail.com',
-    ubicacion: 'Puente Alto, Santiago',
-    disponibilidad: 'Disponible para trabajos',
-    linkedin: 'https://www.linkedin.com/in/bastianorellanac',
-    linkedinLabel: 'linkedin.com/in/bastianorellanac',
-    aporte: 'Frontend en React, API en Express/Prisma, autenticación con JWT y 2FA, y CI/CD con GitHub Actions.',
-    stack: ['React', 'TypeScript', 'Node.js', 'Express', 'PostgreSQL', 'Prisma', 'JWT', 'GitHub Actions'],
-    experiencia: [
-      { anio: '2026', titulo: 'Centro de Psicología Clínica', detalle: 'Frontend en React/Vite/Tailwind, API REST con Express y Prisma, JWT + verificación en dos pasos, CI/CD con GitHub Actions y migración a Neon.' },
-      { anio: 'Jul—Dic 2024', titulo: 'IGN.Tattoo', detalle: 'Proyecto de título: app móvil (React Native/Expo) y plataforma web para estudios de tatuajes, con API en Node/Express sobre PostgreSQL.' },
-      { anio: 'Dic 2024—Feb 2025', titulo: 'Aplicaciones Computacionales SPA (ACL TI)', detalle: 'Práctica full-stack: dashboards con Next.js y Prisma, documentación de API con Swagger.' }
-    ]
-  },
-  {
-    id: 2,
-    nombre: 'Tomás González',
-    rol: 'Desarrollo full-stack',
-    bio: 'Ingeniero en Informática con Especialización de "Ciencia de Datos" (DUOC UC)',
-    correo: 'tomas.gonzalezr04@gmail.com',
-    ubicacion: 'Santiago, Chile',
-    ingles: 'Inglés intermedio alto (B2)',
-    disponibilidad: 'Disponible para trabajos',
-    linkedin: 'https://www.linkedin.com/in/tomás-gonzález-rodríguez-063511252',
-    linkedinLabel: 'linkedin.com/in/tomás-gonzález-rodríguez-063511252',
-    aporte: 'Desarrollo full-stack.',
-    stack: ['React', 'Node.js', 'TypeScript', 'Express', 'Prisma', 'PostgreSQL', 'Python', 'Tailwind', 'Angular', 'Ionic', 'Git'],
-    experiencia: [
-      { anio: '2026', titulo: 'CRM Clinico', detalle: 'Frontend en React/Vite/Tailwind, API REST con Express y Prisma, JWT + verificación 2FA, almacenamiento de documentos en Cloudflare R2, CI/CD con GitHub Actions y PostgreSQL en Neon.' },
-      { anio: 'Dic 2025—Feb2026', titulo: 'Rymak', detalle: 'Práctica analista de datos: Dashboards e informes con Power BI y Excel.' }
-    ]
-  }
-];
-
-const PROYECTOS = [
-  { anio: '2026', nombre: 'Centro de Psicología Clínica', estado: 'Demo en línea', resumen: 'Sitio público con reserva de horas, portal del paciente y panel del profesional. La demo usa datos ficticios.', href: 'proyecto.html' },
-  { anio: '2026', nombre: 'Próximo encargo', estado: 'En preparación', resumen: 'Espacio reservado para el siguiente proyecto del grupo.', href: 'proyecto.html' }
-];
-
-function avatarMarkup(m, cls) {
-  return m.foto
-    ? `<img class="${cls}" src="${m.foto}" alt="${m.nombre}" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'pin'}))" />`
-    : `<div class="pin"></div>`;
-}
-
-function renderMemberGrid(container) {
-  if (!container) return;
-  container.classList.add('member-grid');
-  container.innerHTML = MIEMBROS.map((m) => `
-    <a class="member-card" href="perfil.html?id=${m.id}">
-      <div class="who">
-        ${avatarMarkup(m, 'avatar')}
-        <div class="name">${m.nombre}</div>
-      </div>
-      <div class="role">${m.rol}</div>
-      <div class="link">Ver perfil →</div>
-    </a>
-  `).join('');
-}
-
-function renderTeamList(container) {
-  if (!container) return;
-  container.innerHTML = MIEMBROS.map((m) => `
-    <a class="team-row" href="perfil.html?id=${m.id}">
-      ${avatarMarkup(m, 'avatar')}
-      <span>
-        <span class="nombre">${m.nombre}</span>
-        <span class="rol">${m.rol}</span>
-      </span>
-      <span class="link">Ver perfil →</span>
-    </a>
-  `).join('');
-}
-
-function renderProjectList(container) {
-  if (!container) return;
-  container.innerHTML = PROYECTOS.map((p) => `
-    <a class="list-row" href="${p.href}">
-      <span class="anio">${p.anio}</span>
-      <span>
-        <span class="nombre">${p.nombre}</span>
-        <span class="resumen">${p.resumen}</span>
-      </span>
-      <span class="estado">${p.estado}</span>
-    </a>
-  `).join('');
-}
-
-function renderProfile() {
-  const params = new URLSearchParams(window.location.search);
-  const id = Number(params.get('id') || 0);
-  const m = MIEMBROS.find((x) => x.id === id) || MIEMBROS[0];
-
-  const avatarEl = document.querySelector('[data-profile-avatar]');
-  if (avatarEl) {
-    if (m.foto) {
-      avatarEl.src = m.foto;
-      avatarEl.alt = m.nombre;
-      avatarEl.style.display = '';
-      avatarEl.onerror = () => { avatarEl.style.display = 'none'; };
-    } else {
-      avatarEl.style.display = 'none';
-    }
-  }
-
-  const set = (selector, value) => {
-    const el = document.querySelector(selector);
-    if (el) el.textContent = value;
-  };
-
-  set('[data-profile-nombre]', m.nombre);
-  set('[data-profile-rol]', `${m.rol} · PanCMdev`);
-  set('[data-profile-bio]', m.bio);
-
-  const expEl = document.querySelector('[data-profile-experiencia]');
-  if (expEl) {
-    expEl.innerHTML = m.experiencia.map((e) => `
-      <div class="exp-row">
-        <span class="year">${e.anio}</span>
-        <span>
-          <span class="titulo">${e.titulo}</span>
-          <span class="detalle">${e.detalle}</span>
-        </span>
-      </div>
-    `).join('');
-  }
-
-  const stackEl = document.querySelector('[data-profile-stack]');
-  if (stackEl) {
-    stackEl.innerHTML = m.stack.map((s) => `<span>${s}</span>`).join('');
-  }
-
-  const datosEl = document.querySelector('[data-profile-datos]');
-  if (datosEl) {
-    datosEl.innerHTML = [m.correo, m.ubicacion, m.ingles, m.disponibilidad].filter(Boolean).join('<br />');
-  }
-
-  const linkedinEl = document.querySelector('[data-profile-linkedin]');
-  if (linkedinEl) {
-    if (m.linkedin) {
-      linkedinEl.href = m.linkedin;
-      linkedinEl.textContent = m.linkedinLabel;
-      linkedinEl.style.display = '';
-    } else {
-      linkedinEl.style.display = 'none';
-    }
-  }
-
-  set('[data-profile-aporte]', m.aporte);
-}
-
 /* Tema claro / oscuro: theme.js aplica el inicial, aquí se alterna y se guarda */
 function initTheme() {
   const root = document.documentElement;
@@ -291,13 +112,31 @@ function initDemo() {
   pintar();
 }
 
+/* Formulario de contacto: arma el correo y abre el programa de correo del visitante */
+function initContactForm() {
+  const form = document.querySelector('[data-contact-form]');
+  if (!form) return;
+  const msgEl = form.querySelector('[data-form-msg]');
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const datos = new FormData(form);
+    const nombre = String(datos.get('nombre') || '').trim();
+    const correo = String(datos.get('correo') || '').trim();
+    const mensaje = String(datos.get('mensaje') || '').trim();
+
+    const asunto = `Contacto desde pancmdev.cl: ${nombre}`;
+    const cuerpo = `${mensaje}\n\n${nombre}\n${correo}`;
+    window.location.href = `mailto:contacto@pancmdev.cl?subject=${encodeURIComponent(asunto)}&body=${encodeURIComponent(cuerpo)}`;
+
+    msgEl.textContent = 'Se abrió tu programa de correo con el mensaje listo para enviar. Si no se abrió, escríbenos a contacto@pancmdev.cl.';
+  });
+}
+
 document.addEventListener('DOMContentLoaded', () => {
-  renderMemberGrid(document.querySelector('[data-member-grid]'));
-  renderTeamList(document.querySelector('[data-team-list]'));
-  renderProjectList(document.querySelector('[data-project-list]'));
-  renderProfile();
   initTheme();
   initRail();
   initReveal();
   initDemo();
+  initContactForm();
 });

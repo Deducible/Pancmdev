@@ -4,6 +4,37 @@
   Header set X-Robots-Tag "noindex, nofollow"
 </IfModule>
 
+# Una sola versión del sitio: https y sin www. La carpeta .well-known queda
+# fuera para que cPanel pueda validar y renovar el certificado SSL.
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  RewriteCond %{REQUEST_URI} !^/\.well-known/
+  RewriteCond %{HTTPS} off [OR]
+  RewriteCond %{HTTP_HOST} ^www\. [NC]
+  RewriteRule ^ https://pancmdev.cl%{REQUEST_URI} [L,R=301]
+
+  # /index.html -> /
+  RewriteCond %{THE_REQUEST} \s/index\.html[\s?]
+  RewriteRule ^index\.html$ / [L,R=301]
+
+  # Perfiles antiguos (perfil.html?id=N) -> página propia de cada integrante
+  RewriteCond %{QUERY_STRING} (^|&)id=0(&|$)
+  RewriteRule ^perfil\.html$ /hector-olivares-rifo.html? [L,R=301]
+  RewriteCond %{QUERY_STRING} (^|&)id=1(&|$)
+  RewriteRule ^perfil\.html$ /bastian-orellana.html? [L,R=301]
+  RewriteCond %{QUERY_STRING} (^|&)id=2(&|$)
+  RewriteRule ^perfil\.html$ /tomas-gonzalez.html? [L,R=301]
+  RewriteRule ^perfil\.html$ /equipo.html? [L,R=301]
+</IfModule>
+
+# Cabeceras de seguridad
+<IfModule mod_headers.c>
+  Header always set Strict-Transport-Security "max-age=31536000"
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>
+
 # Que el navegador revise si hay una versión nueva de las páginas, estilos y
 # scripts antes de usar su copia guardada, así los cambios se ven al subirlos.
 <IfModule mod_headers.c>
