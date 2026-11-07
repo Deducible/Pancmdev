@@ -25,7 +25,8 @@
 <meta property="profile:last_name" content="Orellana" />
 <meta name="twitter:card" content="summary_large_image" />
 <link rel="preload" href="src/fonts/manrope-latin.woff2" as="font" type="font/woff2" crossorigin />
-<link rel="stylesheet" href="styles.css?v=5" />
+<link rel="stylesheet" href="styles.css?v=7" />
+<link rel="stylesheet" href="tech.css?v=2" />
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -59,7 +60,9 @@
       "Node.js",
       "Express",
       "PostgreSQL",
+      "Supabase",
       "Prisma",
+      "Tailwind CSS",
       "JWT",
       "GitHub Actions"
     ],
@@ -104,55 +107,172 @@
           </div>
           <div class="profile-cta">
             <a href="contacto.html" class="primary">Contactar</a>
+            <a href="cv/CV-Bastian-Orellana.pdf" class="secondary" download="CV-Bastian-Orellana.pdf">Descargar CV (PDF)</a>
           </div>
         </div>
-        <p class="profile-bio">Ingeniero en Informática (DUOC UC). Construyó el frontend y la API del Centro de Psicología Clínica, y se encargó de seguridad, autenticación y el pipeline de despliegue.</p>
+        <p class="profile-bio">Ingeniero en Informática titulado (DUOC UC). Desarrolla aplicaciones web full-stack con React, TypeScript, Node.js y Supabase: una tienda online y una plataforma de reservas en producción para clientes reales, y el Centro de Psicología Clínica, donde se encargó del frontend, la API, la seguridad y el despliegue.</p>
       </section>
 
-      <section class="profile-grid">
+      <section class="profile-grid wide">
         <div>
           <div class="panel-label">Experiencia</div>
           <div>
             <div class="exp-row">
-              <span class="year">2026</span>
-              <span>
-                <span class="titulo">Centro de Psicología Clínica</span>
-                <span class="detalle">Frontend en React/Vite/Tailwind, API REST con Express y Prisma, JWT + verificación en dos pasos, CI/CD con GitHub Actions y migración a Neon.</span>
+              <span class="year">Oct 2026—hoy</span>
+              <span class="with-logo">
+                <span class="logo-tile"><img src="src/assets/clientes/rvg.webp" alt="" width="52" height="52" loading="lazy" /></span>
+                <span class="txt">
+                  <span class="titulo">Tienda online Importadora RVG</span>
+                  <span class="detalle">E-commerce en producción para una importadora (unos 850 productos): frontend sin frameworks, base de datos en Supabase con seguridad por fila (RLS), pagos con WebPay Plus (ambiente de pruebas) mediante Edge Functions y correos transaccionales con Resend.</span>
+                </span>
               </span>
             </div>
             <div class="exp-row">
-              <span class="year">Jul—Dic 2024</span>
-              <span>
-                <span class="titulo">IGN.Tattoo</span>
-                <span class="detalle">Proyecto de título: app móvil (React Native/Expo) y plataforma web para estudios de tatuajes, con API en Node/Express sobre PostgreSQL.</span>
+              <span class="year">2024—hoy</span>
+              <span class="with-logo">
+                <span class="logo-tile"><img src="src/assets/clientes/inksai.webp" alt="" width="52" height="52" loading="lazy" /></span>
+                <span class="txt">
+                  <span class="titulo">ink·sai (antes IGN.Tattoo)</span>
+                  <span class="detalle">Nació en 2024 como mi proyecto de título (IGN.Tattoo: app móvil en React Native y plataforma web con Node/Express y PostgreSQL). Su segunda versión, ink·sai, está en producción desde 2026 para un estudio de tatuajes real (equipo de 2): React, TypeScript y Supabase, registro con código por correo (OTP), panel de administración con calendario y correos con dominio propio.</span>
+                </span>
+              </span>
+            </div>
+            <div class="exp-row">
+              <span class="year">Mar—Oct 2026</span>
+              <span class="with-logo">
+                <span class="logo-tile"><img src="src/assets/clientes/centro-psicologia.webp" alt="" width="52" height="52" loading="lazy" /></span>
+                <span class="txt">
+                  <span class="titulo">Centro de Psicología Clínica</span>
+                  <span class="detalle">Equipo de 3. Frontend en React/Vite/Tailwind, API REST con Express y Prisma, JWT y verificación por código (OTP), CI/CD con GitHub Actions y migración a Neon. Hoy es una demo pública con API simulada en el navegador.</span>
+                </span>
               </span>
             </div>
             <div class="exp-row">
               <span class="year">Dic 2024—Feb 2025</span>
-              <span>
-                <span class="titulo">Aplicaciones Computacionales SPA (ACL TI)</span>
-                <span class="detalle">Práctica full-stack: dashboards con Next.js y Prisma, documentación de API con Swagger.</span>
+              <span class="with-logo">
+                <span class="logo-tile"><img src="src/assets/clientes/acl.webp" alt="" width="52" height="52" loading="lazy" /></span>
+                <span class="txt">
+                  <span class="titulo">Aplicaciones Computacionales SPA (ACL TI)</span>
+                  <span class="detalle">Práctica full-stack: dashboards con Next.js y Prisma, documentación de API con Swagger.</span>
+                </span>
               </span>
             </div>
           </div>
         </div>
-        <div>
-          <div class="panel-label">Herramientas</div>
-          <div class="stack-tags"><span>React</span><span>TypeScript</span><span>Node.js</span><span>Express</span><span>PostgreSQL</span><span>Prisma</span><span>JWT</span><span>GitHub Actions</span></div>
-          <div class="panel-label spaced">Contacto</div>
+        <aside>
+          <div class="panel-label">Contacto</div>
           <div class="datos-list"><a href="mailto:b.orellana.cv@gmail.com">b.orellana.cv@gmail.com</a><br />Puente Alto, Santiago<br />Disponible para trabajos</div>
-          <a href="https://www.linkedin.com/in/bastianorellanac" class="linkedin-link" target="_blank" rel="noopener noreferrer">linkedin.com/in/bastianorellanac</a>
+          <div class="link-list">
+            <a href="https://www.linkedin.com/in/bastianorellanac" class="linkedin-link" target="_blank" rel="noopener noreferrer">linkedin.com/in/bastianorellanac</a>
+            <a href="https://github.com/Deducible" class="linkedin-link" target="_blank" rel="noopener noreferrer">github.com/Deducible</a>
+          </div>
+          <div class="panel-label spaced">Educación</div>
+          <div class="edu">
+            <span class="titulo">Ingeniería en Informática</span>
+            <span class="detalle">DUOC UC · Titulado · 2021—2025</span>
+          </div>
+          <div class="panel-label spaced">Idiomas</div>
+          <div class="datos-list">Inglés — intermedio<br />Español — nativo</div>
+        </aside>
+      </section>
+
+      <section class="stack-section" aria-labelledby="stack-h">
+        <h2 class="panel-label" id="stack-h">Stack tecnológico</h2>
+        <div class="stack-grid">
+          <div class="stack-group">
+            <h3 class="stack-title">Lenguajes</h3>
+            <ul class="chips">
+              <li class="tech ti-typescript"><i aria-hidden="true"></i>TypeScript</li>
+              <li class="tech ti-javascript"><i aria-hidden="true"></i>JavaScript</li>
+              <li class="tech ti-python"><i aria-hidden="true"></i>Python</li>
+              <li class="tech ti-html5"><i aria-hidden="true"></i>HTML5</li>
+              <li class="tech ti-css3"><i aria-hidden="true"></i>CSS3</li>
+            </ul>
+          </div>
+          <div class="stack-group">
+            <h3 class="stack-title">Frontend</h3>
+            <ul class="chips">
+              <li class="tech ti-react"><i aria-hidden="true"></i>React</li>
+              <li class="tech ti-nextdotjs"><i aria-hidden="true"></i>Next.js</li>
+              <li class="tech ti-vite"><i aria-hidden="true"></i>Vite</li>
+              <li class="tech ti-tailwindcss"><i aria-hidden="true"></i>Tailwind CSS</li>
+              <li class="tech ti-reactrouter"><i aria-hidden="true"></i>React Router</li>
+              <li class="tech ti-expo"><i aria-hidden="true"></i>React Native (Expo)</li>
+            </ul>
+          </div>
+          <div class="stack-group">
+            <h3 class="stack-title">Backend</h3>
+            <ul class="chips">
+              <li class="tech ti-nodedotjs"><i aria-hidden="true"></i>Node.js</li>
+              <li class="tech ti-express"><i aria-hidden="true"></i>Express</li>
+              <li class="tech ti-deno"><i aria-hidden="true"></i>Deno</li>
+              <li class="tech ti-jsonwebtokens"><i aria-hidden="true"></i>JWT</li>
+              <li class="tech ti-swagger"><i aria-hidden="true"></i>Swagger</li>
+              <li class="tech ti-resend"><i aria-hidden="true"></i>Resend</li>
+            </ul>
+          </div>
+          <div class="stack-group">
+            <h3 class="stack-title">Bases de datos</h3>
+            <ul class="chips">
+              <li class="tech ti-postgresql"><i aria-hidden="true"></i>PostgreSQL</li>
+              <li class="tech ti-supabase"><i aria-hidden="true"></i>Supabase</li>
+              <li class="tech ti-prisma"><i aria-hidden="true"></i>Prisma</li>
+              <li class="tech ti-neon"><i aria-hidden="true"></i>Neon</li>
+            </ul>
+          </div>
+          <div class="stack-group">
+            <h3 class="stack-title">DevOps y herramientas</h3>
+            <ul class="chips">
+              <li class="tech ti-git"><i aria-hidden="true"></i>Git</li>
+              <li class="tech ti-github"><i aria-hidden="true"></i>GitHub</li>
+              <li class="tech ti-githubactions"><i aria-hidden="true"></i>GitHub Actions</li>
+              <li class="tech ti-cloudflare"><i aria-hidden="true"></i>Cloudflare</li>
+              <li class="tech ti-cpanel"><i aria-hidden="true"></i>cPanel</li>
+              <li class="tech ti-jira"><i aria-hidden="true"></i>Jira</li>
+            </ul>
+          </div>
+          <div class="stack-group">
+            <h3 class="stack-title">IA y diseño</h3>
+            <ul class="chips">
+              <li class="tech ti-claude"><i aria-hidden="true"></i>Claude Code</li>
+              <li class="tech ti-claude"><i aria-hidden="true"></i>Claude Design</li>
+              <li class="tech ti-figma"><i aria-hidden="true"></i>Figma</li>
+            </ul>
+          </div>
         </div>
       </section>
 
       <section style="padding:0 var(--gutter) 64px">
         <div class="panel-label">Aporte en proyectos</div>
         <a href="proyecto.html" class="what-did">
-          <span>
-            <span class="title">Centro de Psicología Clínica</span>
-            <span class="aporte">Frontend en React, API en Express/Prisma, autenticación con JWT y 2FA, y CI/CD con GitHub Actions.</span>
+          <span class="with-logo">
+            <span class="logo-tile"><img src="src/assets/clientes/centro-psicologia.webp" alt="" width="60" height="60" loading="lazy" /></span>
+            <span class="txt">
+              <span class="title">Centro de Psicología Clínica</span>
+              <span class="aporte">Frontend en React, API en Express/Prisma, autenticación con JWT y verificación por código, y CI/CD con GitHub Actions.</span>
+            </span>
           </span>
           <span class="year">2026 →</span>
+        </a>
+        <a href="https://importadorarvg.cl" class="what-did" target="_blank" rel="noopener noreferrer">
+          <span class="with-logo">
+            <span class="logo-tile"><img src="src/assets/clientes/rvg.webp" alt="" width="60" height="60" loading="lazy" /></span>
+            <span class="txt">
+              <span class="title">Tienda online Importadora RVG</span>
+              <span class="aporte">Desarrollo completo de la tienda y su panel: base de datos con RLS, pagos con WebPay Plus y correos transaccionales.</span>
+            </span>
+          </span>
+          <span class="year">2026 ↗</span>
+        </a>
+        <a href="https://inksai.cl" class="what-did" target="_blank" rel="noopener noreferrer">
+          <span class="with-logo">
+            <span class="logo-tile"><img src="src/assets/clientes/inksai.webp" alt="" width="60" height="60" loading="lazy" /></span>
+            <span class="txt">
+              <span class="title">ink·sai</span>
+              <span class="aporte">Plataforma de reservas, evolución de mi proyecto de título: frontend en React, base de datos en Supabase y panel de administración.</span>
+            </span>
+          </span>
+          <span class="year">2024—hoy ↗</span>
         </a>
       </section>
     </main>
