@@ -37,5 +37,17 @@
   </FilesMatch>
 </IfModule>
 
+# Las fuentes no cambian: el navegador puede guardarlas un año. Si algún día
+# se cambia una, hay que subirla con otro nombre.
+AddType font/woff2 .woff2
+<IfModule mod_headers.c>
+  <FilesMatch "\.woff2$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+</IfModule>
+
+# Página propia para las direcciones que no existen
+ErrorDocument 404 /404.html
+
 # No listar carpetas
 Options -Indexes

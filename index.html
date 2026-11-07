@@ -22,10 +22,8 @@
 <meta property="og:image:height" content="630" />
 <meta property="og:image:alt" content="PanCMdev: tu negocio tiene dos caras, construimos las dos." />
 <meta name="twitter:card" content="summary_large_image" />
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="styles.css?v=4" />
+<link rel="preload" href="src/fonts/manrope-latin.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="stylesheet" href="styles.css?v=5" />
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -82,8 +80,8 @@
   <div class="shell">
     <header class="site">
       <a href="/" class="logo" aria-label="PanCMdev, inicio">
-        <img class="logo-img only-light" src="src/assets/pancm-logo.webp" alt="" width="68" height="38" />
-        <img class="logo-img only-dark" src="src/assets/pancm-logo-oscuro.webp" alt="" width="68" height="38" />
+        <img class="logo-img only-light" src="src/assets/pancm-logo-172.webp" alt="" width="68" height="38" />
+        <img class="logo-img only-dark" src="src/assets/pancm-logo-oscuro-172.webp" alt="" width="68" height="38" />
         <span class="tag">Desarrollo de software</span>
       </a>
       <nav class="main">
@@ -102,17 +100,17 @@
     <main>
       <section class="hero">
         <div>
-          <div class="eyebrow" data-rise>Desarrollo de software · Chile</div>
-          <h1 data-rise style="--d:.08s">Tu negocio tiene dos caras. Construimos las dos.</h1>
-          <p class="lead" data-rise style="--d:.16s">El sitio donde tus clientes reservan y el panel privado donde tú administras todo. Una sola agenda, un solo equipo, sin planillas ni mensajes sueltos.</p>
-          <div class="actions" data-rise style="--d:.24s">
+          <div class="eyebrow">Desarrollo de software · Chile</div>
+          <h1>Tu negocio tiene dos caras. Construimos las dos.</h1>
+          <p class="lead" data-rise>El sitio donde tus clientes reservan y el panel privado donde tú administras todo. Una sola agenda, un solo equipo, sin planillas ni mensajes sueltos.</p>
+          <div class="actions" data-rise style="--d:.08s">
             <a href="proyecto.html" class="btn">Ver caso de estudio</a>
             <a href="equipo.html" class="btn-outline">Conocer al equipo</a>
           </div>
         </div>
-        <div class="brand-panel" data-rise style="--d:.2s">
-          <img class="only-light" src="src/assets/pancm-logo.webp" alt="Logo de PanCMdev" width="900" height="504" />
-          <img class="only-dark" src="src/assets/pancm-logo-oscuro.webp" alt="" width="900" height="504" />
+        <div class="brand-panel">
+          <img class="only-light" src="src/assets/pancm-logo.webp" srcset="src/assets/pancm-logo-480.webp 480w, src/assets/pancm-logo.webp 900w" sizes="(max-width: 560px) calc(100vw - 96px), 440px" alt="Logo de PanCMdev" width="900" height="504" />
+          <img class="only-dark" src="src/assets/pancm-logo-oscuro.webp" srcset="src/assets/pancm-logo-oscuro-480.webp 480w, src/assets/pancm-logo-oscuro.webp 900w" sizes="(max-width: 560px) calc(100vw - 96px), 440px" alt="" width="900" height="504" />
         </div>
       </section>
 
@@ -190,7 +188,7 @@
           </a>
           <a class="member-card" href="bastian-orellana.html">
             <div class="who">
-              <img class="avatar" src="src/assets/bastian-orellana.png" alt="Bastián Orellana" width="56" height="56" />
+              <img class="avatar" src="src/assets/bastian-orellana.webp" alt="Bastián Orellana" width="56" height="56" />
               <div class="name">Bastián Orellana</div>
             </div>
             <div class="role">Desarrollo full-stack</div>
@@ -210,8 +208,8 @@
 
     <footer class="site">
       <span class="brand">
-        <img class="only-light" src="src/assets/pancm-logo.webp" alt="" width="46" height="26" />
-        <img class="only-dark" src="src/assets/pancm-logo-oscuro.webp" alt="" width="46" height="26" />
+        <img class="only-light" src="src/assets/pancm-logo-172.webp" alt="" width="46" height="26" />
+        <img class="only-dark" src="src/assets/pancm-logo-oscuro-172.webp" alt="" width="46" height="26" />
         PanCMdev · Desarrollo de software · Chile
       </span>
       <a href="mailto:contacto@pancmdev.cl">contacto@pancmdev.cl</a>
