@@ -24,10 +24,8 @@
 <meta property="profile:first_name" content="Héctor" />
 <meta property="profile:last_name" content="Olivares Rifo" />
 <meta name="twitter:card" content="summary_large_image" />
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="styles.css?v=4" />
+<link rel="preload" href="src/fonts/manrope-latin.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="stylesheet" href="styles.css?v=5" />
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -62,7 +60,9 @@
       "Electron",
       "WebSockets",
       "Tailwind",
+      "Astro",
       "PHP",
+      "PostgreSQL",
       "Excel",
       "Power BI",
       "Claude Code",
@@ -80,8 +80,8 @@
   <div class="shell">
     <header class="site">
       <a href="/" class="logo" aria-label="PanCMdev, inicio">
-        <img class="logo-img only-light" src="src/assets/pancm-logo.webp" alt="" width="68" height="38" />
-        <img class="logo-img only-dark" src="src/assets/pancm-logo-oscuro.webp" alt="" width="68" height="38" />
+        <img class="logo-img only-light" src="src/assets/pancm-logo-172.webp" alt="" width="68" height="38" />
+        <img class="logo-img only-dark" src="src/assets/pancm-logo-oscuro-172.webp" alt="" width="68" height="38" />
         <span class="tag">Desarrollo de software</span>
       </a>
       <nav class="main">
@@ -157,7 +157,7 @@
         </div>
         <div>
           <div class="panel-label">Herramientas</div>
-          <div class="stack-tags"><span>React</span><span>TypeScript</span><span>Node.js</span><span>Electron</span><span>WebSockets</span><span>Tailwind</span><span>PHP</span><span>Excel</span><span>Power BI</span><span>Claude Code</span><span>Rust</span></div>
+          <div class="stack-tags"><span>React</span><span>TypeScript</span><span>Node.js</span><span>Electron</span><span>WebSockets</span><span>Tailwind</span><span>Astro</span><span>PHP</span><span>PostgreSQL</span><span>Excel</span><span>Power BI</span><span>Claude Code</span><span>Rust</span></div>
           <div class="panel-label spaced">Contacto</div>
           <div class="datos-list"><a href="mailto:h.olivaresrifo@gmail.com">h.olivaresrifo@gmail.com</a><br />Santiago, Chile<br />Inglés intermedio alto (B2)<br />Disponible para trabajos</div>
           <a href="https://www.linkedin.com/in/h%C3%A9ctor-enrique-olivares-rifo/" class="linkedin-link" target="_blank" rel="noopener noreferrer">linkedin.com/in/héctor-enrique-olivares-rifo</a>
@@ -178,8 +178,8 @@
 
     <footer class="site">
       <span class="brand">
-        <img class="only-light" src="src/assets/pancm-logo.webp" alt="" width="46" height="26" />
-        <img class="only-dark" src="src/assets/pancm-logo-oscuro.webp" alt="" width="46" height="26" />
+        <img class="only-light" src="src/assets/pancm-logo-172.webp" alt="" width="46" height="26" />
+        <img class="only-dark" src="src/assets/pancm-logo-oscuro-172.webp" alt="" width="46" height="26" />
         PanCMdev · Desarrollo de software · Chile
       </span>
       <a href="mailto:contacto@pancmdev.cl">contacto@pancmdev.cl</a>
