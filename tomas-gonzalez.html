@@ -25,7 +25,8 @@
 <meta property="profile:last_name" content="González" />
 <meta name="twitter:card" content="summary_large_image" />
 <link rel="preload" href="src/fonts/manrope-latin.woff2" as="font" type="font/woff2" crossorigin />
-<link rel="stylesheet" href="styles.css?v=5" />
+<link rel="stylesheet" href="styles.css?v=7" />
+<link rel="stylesheet" href="tech.css?v=4" />
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -37,6 +38,7 @@
     "name": "Tomás González",
     "jobTitle": "Desarrollador full-stack",
     "url": "https://pancmdev.cl/tomas-gonzalez.html",
+    "image": "https://pancmdev.cl/src/assets/tomas-gonzalez.webp",
     "worksFor": {
       "@type": "Organization",
       "@id": "https://pancmdev.cl/#org",
@@ -98,6 +100,7 @@
         <a href="equipo.html" class="back-link">← Equipo</a>
         <div class="profile-head">
           <div class="who">
+            <img class="profile-avatar" src="src/assets/tomas-gonzalez.webp" alt="Tomás González" width="84" height="84"/>
             <div>
               <h1>Tomás González</h1>
               <p class="profile-role">Desarrollo full-stack · PanCMdev</p>
@@ -110,41 +113,99 @@
         <p class="profile-bio">Ingeniero en Informática con Especialización de "Ciencia de Datos" (DUOC UC)</p>
       </section>
 
-      <section class="profile-grid">
+      <section class="profile-grid wide">
         <div>
           <div class="panel-label">Experiencia</div>
           <div>
             <div class="exp-row">
               <span class="year">2026</span>
-              <span>
-                <span class="titulo">Centro de Psicología Clínica</span>
-                <span class="detalle">Frontend en React/Vite/Tailwind, API REST con Express y Prisma, JWT + verificación 2FA, almacenamiento de documentos en Cloudflare R2, CI/CD con GitHub Actions y PostgreSQL en Neon.</span>
+              <span class="with-logo">
+                <span class="logo-tile"><img src="src/assets/clientes/centro-psicologia.webp" alt="" width="52" height="52" loading="lazy" /></span>
+                <span class="txt">
+                  <span class="titulo">Centro de Psicología Clínica</span>
+                  <span class="detalle">Frontend en React/Vite/Tailwind, API REST con Express y Prisma, JWT + verificación 2FA, almacenamiento de documentos en Cloudflare R2, CI/CD con GitHub Actions y PostgreSQL en Neon.</span>
+                </span>
               </span>
             </div>
             <div class="exp-row">
               <span class="year">Dic 2025—Feb 2026</span>
-              <span>
-                <span class="titulo">Rymak</span>
-                <span class="detalle">Práctica analista de datos: Dashboards e informes con Power BI y Excel.</span>
+              <span class="with-logo">
+                <span class="logo-tile"><img src="rymak.webp" alt="Rymak" width="52" height="52" style="object-fit: contain;" loading="lazy"/></span>
+                <span class="txt">
+                  <span class="titulo">Rymak</span>
+                  <span class="detalle">Práctica analista de datos: Dashboards e informes con Power BI y Excel.</span>
+                </span>
               </span>
             </div>
           </div>
         </div>
-        <div>
-          <div class="panel-label">Herramientas</div>
-          <div class="stack-tags"><span>React</span><span>Node.js</span><span>TypeScript</span><span>Express</span><span>Prisma</span><span>PostgreSQL</span><span>Python</span><span>Tailwind</span><span>Angular</span><span>Ionic</span><span>Git</span></div>
-          <div class="panel-label spaced">Contacto</div>
-          <div class="datos-list"><a href="mailto:tomas.gonzalezr04@gmail.com">tomas.gonzalezr04@gmail.com</a><br />Santiago, Chile<br />Inglés intermedio alto (B2)<br />Disponible para trabajos</div>
-          <a href="https://www.linkedin.com/in/tom%C3%A1s-gonz%C3%A1lez-rodr%C3%ADguez-063511252" class="linkedin-link" target="_blank" rel="noopener noreferrer">linkedin.com/in/tomás-gonzález-rodríguez-063511252</a>
+        <aside>
+          <div class="panel-label">Contacto</div>
+          <div class="datos-list"><a href="mailto:tomas.gonzalezr04@gmail.com">tomas.gonzalezr04@gmail.com</a><br />Santiago, Chile<br />Disponible para trabajos</div>
+          <div class="link-list">
+            <a href="https://www.linkedin.com/in/tom%C3%A1s-gonz%C3%A1lez-rodr%C3%ADguez-063511252" class="linkedin-link" target="_blank" rel="noopener noreferrer">linkedin.com/in/tomás-gonzález-rodríguez-063511252</a>
+          </div>
+          <div class="panel-label spaced">Educación</div>
+          <div class="edu">
+            <span class="titulo">Ingeniería en Informática</span>
+            <span class="detalle">DUOC UC · Especialización en Ciencia de Datos · Titulado · 2022—2025</span>
+          </div>
+          <div class="panel-label spaced">Idiomas</div>
+          <div class="datos-list">Inglés — intermedio alto (B2)<br />Español — nativo</div>
+        </aside>
+      </section>
+
+      <section class="stack-section" aria-labelledby="stack-h">
+        <h2 class="panel-label" id="stack-h">Stack tecnológico</h2>
+        <div class="stack-grid">
+          <div class="stack-group">
+            <h3 class="stack-title">Lenguajes</h3>
+            <ul class="chips">
+              <li class="tech ti-typescript"><i aria-hidden="true"></i>TypeScript</li>
+              <li class="tech ti-python"><i aria-hidden="true"></i>Python</li>
+            </ul>
+          </div>
+          <div class="stack-group">
+            <h3 class="stack-title">Frontend</h3>
+            <ul class="chips">
+              <li class="tech ti-react"><i aria-hidden="true"></i>React</li>
+              <li class="tech ti-angular"><i aria-hidden="true"></i>Angular</li>
+              <li class="tech ti-ionic"><i aria-hidden="true"></i>Ionic</li>
+              <li class="tech ti-tailwindcss"><i aria-hidden="true"></i>Tailwind</li>
+            </ul>
+          </div>
+          <div class="stack-group">
+            <h3 class="stack-title">Backend</h3>
+            <ul class="chips">
+              <li class="tech ti-nodedotjs"><i aria-hidden="true"></i>Node.js</li>
+              <li class="tech ti-express"><i aria-hidden="true"></i>Express</li>
+            </ul>
+          </div>
+          <div class="stack-group">
+            <h3 class="stack-title">Bases de datos</h3>
+            <ul class="chips">
+              <li class="tech ti-postgresql"><i aria-hidden="true"></i>PostgreSQL</li>
+              <li class="tech ti-prisma"><i aria-hidden="true"></i>Prisma</li>
+            </ul>
+          </div>
+          <div class="stack-group">
+            <h3 class="stack-title">DevOps y herramientas</h3>
+            <ul class="chips">
+              <li class="tech ti-git"><i aria-hidden="true"></i>Git</li>
+            </ul>
+          </div>
         </div>
       </section>
 
       <section style="padding:0 var(--gutter) 64px">
         <div class="panel-label">Aporte en proyectos</div>
         <a href="proyecto.html" class="what-did">
-          <span>
-            <span class="title">Centro de Psicología Clínica</span>
-            <span class="aporte">Desarrollo full-stack.</span>
+          <span class="with-logo">
+            <span class="logo-tile"><img src="src/assets/clientes/centro-psicologia.webp" alt="" width="60" height="60" loading="lazy" /></span>
+            <span class="txt">
+              <span class="title">Centro de Psicología Clínica</span>
+              <span class="aporte">Desarrollo full-stack.</span>
+            </span>
           </span>
           <span class="year">2026 →</span>
         </a>
