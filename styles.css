@@ -61,6 +61,7 @@
   --green: #1F6B4D;
   --green-bg: #EDF6F1;
   --green-border: #CFE5DA;
+  --error: #B42318;
   --pub-bg: #FFFFFF;
   --priv-bg: #0A0B0D;
   --priv-border: #0A0B0D;
@@ -101,6 +102,7 @@
   --green: #4ADE9A;
   --green-bg: #0F2A1F;
   --green-border: #1E4A36;
+  --error: #FF8A80;
   --pub-bg: #F3F5F8;
   --priv-bg: #14171C;
   --priv-border: #262B33;
@@ -306,6 +308,9 @@ nav.main a.cta:hover { background: var(--accent); color: #FFFFFF; }
 main section { padding: 0 var(--gutter); }
 
 .section { padding: 72px var(--gutter); }
+
+/* Al saltar a un ancla (#cotizar) el título no queda bajo el encabezado fijo */
+section[id] { scroll-margin-top: 40px; }
 
 .band {
   background: var(--surface);
@@ -841,7 +846,8 @@ h1 {
 
 .feature-grid > div { border-top: 2px solid var(--rule); padding-top: 16px; }
 
-.feature-grid h2 {
+.feature-grid h2,
+.feature-grid h3 {
   margin: 0 0 10px;
   font-family: var(--display);
   font-size: 20px;
@@ -856,6 +862,12 @@ h1 {
   font-size: 15.5px;
   text-wrap: pretty;
 }
+
+.feature-grid .eyebrow { margin-bottom: 10px; }
+
+/* Enlace dentro de un párrafo: subrayado para que se distinga del texto */
+.inline-link { color: var(--accent); border-bottom: 1px solid currentColor; }
+.inline-link:hover { color: var(--ink); }
 
 /* Perfil individual */
 .profile-head {
@@ -1138,7 +1150,10 @@ form.contact-form {
 }
 
 form.contact-form input,
-form.contact-form textarea {
+form.contact-form textarea,
+.quote-form .campo input,
+.quote-form select,
+.quote-form textarea {
   font-family: var(--sans);
   font-size: 15px;
   padding: 13px 14px;
@@ -1149,12 +1164,18 @@ form.contact-form textarea {
 }
 
 form.contact-form input::placeholder,
-form.contact-form textarea::placeholder { color: var(--muted); }
+form.contact-form textarea::placeholder,
+.quote-form input::placeholder,
+.quote-form textarea::placeholder { color: var(--muted); }
 
-form.contact-form textarea { resize: vertical; }
+form.contact-form textarea,
+.quote-form textarea { resize: vertical; }
 
 form.contact-form input:focus,
-form.contact-form textarea:focus {
+form.contact-form textarea:focus,
+.quote-form .campo input:focus,
+.quote-form select:focus,
+.quote-form textarea:focus {
   border-color: var(--accent);
   outline: none;
 }
@@ -1176,8 +1197,94 @@ form.contact-form button {
 form.contact-form button:hover { background: var(--btn-hover); }
 [data-theme='dark'] form.contact-form button:hover { color: #0A0B0D; }
 
-form.contact-form .form-msg { margin: 0; font-size: 15px; line-height: 1.55; color: var(--ink-soft); max-width: 56ch; }
-form.contact-form .form-msg:empty { display: none; }
+.form-msg { margin: 0; font-size: 15px; line-height: 1.55; color: var(--ink-soft); max-width: 56ch; }
+.form-msg:empty { display: none; }
+.form-msg.ok { color: var(--green); font-weight: 600; }
+.form-msg.error { color: var(--error); font-weight: 600; }
+
+/* Formulario de cotización (servicios): etiquetas visibles, casillas en columnas */
+.quote-form {
+  margin-top: 34px;
+  display: grid;
+  gap: 28px;
+  max-width: 780px;
+}
+
+.quote-form fieldset { margin: 0; padding: 0; border: 0; min-width: 0; }
+
+.quote-form legend,
+.quote-form .campo {
+  padding: 0;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.quote-form legend { margin-bottom: 12px; }
+.quote-form .campo { display: grid; gap: 8px; align-content: start; }
+.quote-form .opc { font-weight: 500; color: var(--muted); }
+
+.quote-form .campos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 16px;
+}
+
+.quote-form .opciones {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 12px 24px;
+}
+
+.quote-form .opcion {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 15px;
+  color: var(--ink-soft);
+  cursor: pointer;
+}
+
+.quote-form .opcion input[type='checkbox'],
+.quote-form .opcion input[type='radio'] {
+  flex: none;
+  width: 18px;
+  height: 18px;
+  margin: 0;
+  accent-color: var(--accent);
+}
+
+/* "Otros": casilla y campo de texto en una fila completa */
+.quote-form .opcion-otros { grid-column: 1 / -1; flex-wrap: wrap; cursor: default; }
+.quote-form .opcion-otros label { cursor: pointer; }
+
+.quote-form .opcion-otros input[type='text'] {
+  flex: 1 1 240px;
+  max-width: 420px;
+  font-family: var(--sans);
+  font-size: 15px;
+  padding: 9px 12px;
+  border: 1px solid var(--border-strong);
+  background: var(--card);
+  border-radius: 6px;
+  color: var(--ink);
+}
+
+.quote-form .opcion-otros input[type='text']:focus { border-color: var(--accent); outline: none; }
+
+.quote-form .ayuda { font-size: 13.5px; font-weight: 500; line-height: 1.5; color: var(--muted); }
+
+.quote-form .btn { justify-self: start; }
+.quote-form .btn:disabled { opacity: 0.6; cursor: progress; transform: none; }
+
+/* Campo trampa contra bots: fuera de la pantalla, las personas no lo ven */
+.quote-form .trampa {
+  position: absolute;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
 
 /* Footer */
 footer.site {
@@ -1224,6 +1331,9 @@ footer.site a:hover,
 
   /* En móvil el botón de tema sube a la esquina, junto al logo */
   .theme-toggle { position: absolute; top: 6px; right: var(--gutter); width: 40px; height: 40px; }
+
+  /* Los cinco enlaces no caben en una fila: Contacto sube junto al botón de tema */
+  nav.main a.cta { position: absolute; top: 7px; right: calc(var(--gutter) + 48px); }
 
   .hero { padding-top: 40px; padding-bottom: 48px; }
 
