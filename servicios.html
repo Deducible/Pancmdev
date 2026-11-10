@@ -23,7 +23,7 @@
 <meta property="og:image:alt" content="PanCMdev: tu negocio tiene dos caras, construimos las dos." />
 <meta name="twitter:card" content="summary_large_image" />
 <link rel="preload" href="src/fonts/manrope-latin.woff2" as="font" type="font/woff2" crossorigin />
-<link rel="stylesheet" href="styles.css?v=9" />
+<link rel="stylesheet" href="styles.css?v=11" />
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -71,7 +71,6 @@
         <a href="servicios.html">Servicios</a>
         <a href="proyectos.html">Proyectos</a>
         <a href="equipo.html">Equipo</a>
-        <a href="nosotros.html">Metodología</a>
         <a href="contacto.html" class="cta">Contacto</a>
         <button type="button" class="theme-toggle" data-theme-toggle aria-label="Cambiar a tema oscuro">
           <svg class="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
@@ -81,83 +80,113 @@
       <div class="rail" aria-hidden="true"><i></i></div>
     </header>
     <main>
-      <section style="padding:64px var(--gutter) 56px;border-bottom:1px solid var(--border)">
-        <div class="eyebrow">Servicios</div>
-        <h1>Sitios y sistemas a medida para tu negocio.</h1>
-        <p class="lead">El sitio donde tus clientes te encuentran y reservan, y el sistema de administración donde tú manejas todo. Hecho a tu medida: con tu marca, tus servicios y tu forma de trabajar.</p>
-        <div class="actions">
-          <a href="#cotizar" class="btn">Cotiza tu proyecto</a>
-          <a href="proyecto.html" class="btn-outline">Prueba la demo</a>
+      <section class="hero srv-hero">
+        <div>
+          <div class="eyebrow" data-rise>Servicios</div>
+          <h1 data-rise style="--d:.06s">Sitios y sistemas a medida para tu negocio.</h1>
+          <p class="lead" data-rise style="--d:.12s">Parte por lo que hoy necesitas y suma el resto cuando quieras. Hecho a tu medida: con tu marca, tus servicios y tu forma de trabajar.</p>
+          <div class="actions" data-rise style="--d:.18s">
+            <a href="#cotizar" class="btn">Cotiza tu proyecto</a>
+            <a href="proyecto.html" class="btn-outline">Prueba la demo</a>
+          </div>
+        </div>
+        <div data-rise style="--d:.24s">
+          <a href="proyecto.html" class="srv-demo" aria-label="Prueba la demo: Centro de Psicología Clínica">
+            <span class="bar" aria-hidden="true"><i></i><i></i><i></i><span>centro-psicologia-demo.pages.dev</span></span>
+            <span class="shot"><img src="src/assets/proyectos/centro-psicologia-demo.webp" alt="Vista previa de la demo del Centro de Psicología Clínica" width="960" height="504" /></span>
+            <span class="foot"><span>Prueba la demo</span><span class="flecha" aria-hidden="true">→</span></span>
+          </a>
         </div>
       </section>
 
-      <section class="section">
-        <div class="section-head">
+      <section class="section srv-que">
+        <div class="section-head" data-reveal>
           <h2>Qué construimos</h2>
           <span class="tag">Todo a medida</span>
         </div>
-        <div class="feature-grid">
-          <div>
-            <h3>Sitio para tus clientes</h3>
-            <p>Tu negocio en internet con tu marca: servicios, equipo, precios y contacto. Rápido, cómodo en el celular y preparado para aparecer en Google.</p>
+        <div class="srv-piezas">
+          <div class="pieza" data-reveal>
+            <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18zM3 12h18M12 3c2.5 2.5 3.8 5.5 3.8 9s-1.3 6.5-3.8 9c-2.5-2.5-3.8-5.5-3.8-9S9.5 5.5 12 3z"/></svg></span>
+            <div>
+              <h3>Sitio para tus clientes</h3>
+              <p>Tu negocio en internet con tu marca: servicios, equipo, precios y contacto. Rápido, cómodo en el celular y preparado para aparecer en Google.</p>
+            </div>
           </div>
-          <div>
-            <h3>Reservas en línea</h3>
-            <p>Tus clientes eligen servicio, día y hora según tu disponibilidad real. Una hora tomada deja de estar disponible al instante: no hay doble reserva.</p>
+          <div class="pieza" data-reveal style="--d:.08s">
+            <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 5h14a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1zM4 10h16M8 3v4M16 3v4"/></svg></span>
+            <div>
+              <h3>Reservas en línea</h3>
+              <p>Tus clientes eligen servicio, día y hora según tu disponibilidad real. Una hora tomada deja de estar disponible al instante: no hay doble reserva.</p>
+            </div>
           </div>
-          <div>
-            <h3>Sistema de administración</h3>
-            <p>Un panel privado para ti y tu equipo, con la agenda, los clientes, los pagos, los bloqueos de fechas y las métricas del negocio.</p>
+          <div class="pieza" data-reveal>
+            <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16v14H4zM4 10h16M10 10v9"/></svg></span>
+            <div>
+              <h3>Sistema de administración</h3>
+              <p>Un panel privado para ti y tu equipo, con la agenda, los clientes, los pagos, los bloqueos de fechas y las métricas del negocio.</p>
+            </div>
           </div>
-          <div>
-            <h3>Portal de clientes</h3>
-            <p>Cada cliente con su cuenta para ver sus reservas, documentos y mensajes en un solo lugar.</p>
+          <div class="pieza" data-reveal style="--d:.08s">
+            <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM4 20c0-3.5 3.6-6 8-6s8 2.5 8 6"/></svg></span>
+            <div>
+              <h3>Portal de clientes</h3>
+              <p>Cada cliente con su cuenta para ver sus reservas, documentos y mensajes en un solo lugar.</p>
+            </div>
           </div>
-          <div>
-            <h3>Pagos en línea</h3>
-            <p>Cobro al reservar o por servicio, integrado con medios de pago en línea.</p>
+          <div class="pieza" data-reveal>
+            <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 6h18v12H3zM3 10h18M7 15h4"/></svg></span>
+            <div>
+              <h3>Pagos en línea</h3>
+              <p>Cobro al reservar o por servicio, integrado con medios de pago en línea.</p>
+            </div>
           </div>
-          <div>
-            <h3>Correos y avisos automáticos</h3>
-            <p>Confirmaciones, recordatorios y avisos que salen solos, con el dominio de tu negocio.</p>
+          <div class="pieza" data-reveal style="--d:.08s">
+            <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 6h18v12H3zM3 7l9 7 9-7"/></svg></span>
+            <div>
+              <h3>Correos y avisos automáticos</h3>
+              <p>Confirmaciones, recordatorios y avisos que salen solos, con el dominio de tu negocio.</p>
+            </div>
           </div>
         </div>
       </section>
 
-      <section class="section band">
-        <div class="section-head">
+      <section class="section band srv-como">
+        <div class="section-head" data-reveal>
           <h2>Cómo trabajamos</h2>
-          <a href="nosotros.html">Ver metodología →</a>
         </div>
-        <div class="feature-grid">
-          <div>
+        <ol class="srv-pasos">
+          <li class="paso" data-reveal style="--d:0s">
             <div class="eyebrow">Paso 01</div>
             <h3>Nos cuentas qué necesitas</h3>
-            <p>Llenas el formulario de abajo y te respondemos en 48 horas con una propuesta y un plazo estimado.</p>
-          </div>
-          <div>
+            <p>Llenas el formulario de abajo y te respondemos con una propuesta y un plazo estimado.</p>
+          </li>
+          <li class="paso" data-reveal style="--d:.14s">
             <div class="eyebrow">Paso 02</div>
             <h3>Diagnóstico</h3>
             <p>Revisamos cómo funciona hoy tu negocio: quién agenda, quién confirma y dónde se pierde el tiempo.</p>
-          </div>
-          <div>
+          </li>
+          <li class="paso" data-reveal style="--d:.28s">
             <div class="eyebrow">Paso 03</div>
             <h3>Construcción</h3>
             <p>Hacemos las dos caras, el sitio para tus clientes y el sistema de administración, con tu marca y tus servicios.</p>
-          </div>
-          <div>
+          </li>
+          <li class="paso" data-reveal style="--d:.42s">
             <div class="eyebrow">Paso 04</div>
             <h3>Publicación y soporte</h3>
             <p>Lo dejamos funcionando con tu dominio y seguimos atendiendo ajustes, dudas y mejoras.</p>
-          </div>
-        </div>
+          </li>
+        </ol>
       </section>
 
       <section class="section" id="cotizar">
-        <div class="section-head">
-          <h2>Cotiza tu proyecto</h2>
+       <div class="srv-cot">
+        <div class="srv-cot-intro">
+          <div class="section-head" data-reveal>
+            <h2>Cotiza tu proyecto</h2>
+          </div>
+          <p class="lead" style="margin-top:0">Marca lo que necesitas y cuéntanos de tu negocio. Te respondemos con una propuesta y un plazo estimado. Si el proyecto no es para nosotros, te lo decimos de inmediato.</p>
+          <p class="srv-cot-nota">¿Prefieres escribir directo? <a href="mailto:contacto@pancmdev.cl">contacto@pancmdev.cl</a></p>
         </div>
-        <p class="lead" style="margin-top:0">Marca lo que necesitas y cuéntanos de tu negocio. Te respondemos en 48 horas con una propuesta y un plazo estimado. Si el proyecto no es para nosotros, te lo decimos de inmediato.</p>
 
         <form class="quote-form" action="cotizar.php" method="post" data-quote-form>
           <div class="campos">
@@ -231,6 +260,7 @@
           <button type="submit" class="btn">Enviar solicitud</button>
           <p class="form-msg" data-form-msg aria-live="polite"></p>
         </form>
+       </div>
       </section>
     </main>
 
