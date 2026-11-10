@@ -23,7 +23,7 @@
 <meta property="og:image:alt" content="PanCMdev: tu negocio tiene dos caras, construimos las dos." />
 <meta name="twitter:card" content="summary_large_image" />
 <link rel="preload" href="src/fonts/manrope-latin.woff2" as="font" type="font/woff2" crossorigin />
-<link rel="stylesheet" href="styles.css?v=9" />
+<link rel="stylesheet" href="styles.css?v=11" />
 </head>
 <body>
 
@@ -38,7 +38,6 @@
         <a href="servicios.html">Servicios</a>
         <a href="proyectos.html">Proyectos</a>
         <a href="equipo.html">Equipo</a>
-        <a href="nosotros.html">Metodología</a>
         <a href="contacto.html" class="cta">Contacto</a>
         <button type="button" class="theme-toggle" data-theme-toggle aria-label="Cambiar a tema oscuro">
           <svg class="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
@@ -52,24 +51,35 @@
         <h1 class="page-title">Proyectos</h1>
         <p class="page-sub">Una demo completa que puedes probar. El próximo proyecto puede ser el tuyo.</p>
       </section>
-      <section style="padding:0">
-        <div>
-          <a class="list-row" href="proyecto.html">
-            <span class="anio">2026</span>
-            <span>
-              <span class="nombre">Centro de Psicología Clínica</span>
-              <span class="resumen">Proyecto demo: sitio con reserva de horas, portal del paciente y panel del profesional, con datos de ejemplo.</span>
-            </span>
-            <span class="estado">Demo en línea</span>
-          </a>
-          <a class="list-row" href="servicios.html#cotizar">
-            <span class="anio">Próximo</span>
-            <span>
-              <span class="nombre">Tu proyecto</span>
-              <span class="resumen">Cuéntanos qué necesita tu negocio y te respondemos con una propuesta y un plazo estimado.</span>
-            </span>
-            <span class="estado">Cotizar →</span>
-          </a>
+      <section class="section pry">
+        <div class="pry-grid">
+          <div data-reveal>
+            <a class="pry-card" href="proyecto.html">
+              <span class="pry-thumb"><img src="src/assets/proyectos/centro-psicologia-demo.webp" alt="Vista previa de la demo del Centro de Psicología Clínica" width="960" height="504" /></span>
+              <span class="pry-body">
+                <span class="pry-meta"><span>2026</span><span aria-hidden="true">·</span><span class="estado">Demo en línea</span></span>
+                <span class="pry-nombre">Centro de Psicología Clínica</span>
+                <span class="pry-resumen">Proyecto demo: sitio con reserva de horas, portal del paciente y panel del profesional, con datos de ejemplo.</span>
+                <span class="pry-skills"><i aria-hidden="true"></i><span>React, Vite, Tailwind CSS, Express, Prisma</span></span>
+                <span class="pry-cta"><span>Prueba la demo</span><span class="flecha" aria-hidden="true">→</span></span>
+              </span>
+            </a>
+          </div>
+          <div data-reveal style="--d:.1s">
+            <a class="pry-card" href="servicios.html#cotizar">
+              <span class="pry-thumb pry-thumb--vacio" aria-hidden="true">
+                <span class="pry-mas"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></span>
+                <span class="pry-vacio-txt">Aquí va el tuyo</span>
+              </span>
+              <span class="pry-body">
+                <span class="pry-meta"><span>Próximo</span></span>
+                <span class="pry-nombre">Tu proyecto</span>
+                <span class="pry-resumen">Cuéntanos qué necesita tu negocio y te respondemos con una propuesta y un plazo estimado.</span>
+                <span class="pry-skills"><i aria-hidden="true"></i><span>Sitio, reservas, pagos y sistema de administración</span></span>
+                <span class="pry-cta"><span>Cotizar</span><span class="flecha" aria-hidden="true">→</span></span>
+              </span>
+            </a>
+          </div>
         </div>
       </section>
     </main>
