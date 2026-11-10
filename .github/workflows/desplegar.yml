@@ -47,10 +47,7 @@ jobs:
             --exclude-glob .github/ \
             --exclude-glob .gitignore \
             --exclude-glob .claude/ \
-            --exclude-glob src/assets/consulta.webp \
-            --exclude-glob src/assets/psicoterapia2.webp \
-            --exclude-glob src/assets/centro-psicologia-hero.webp \
-            --exclude-glob src/assets/centro-psicologia-costa.webp \
+            --exclude-glob README.md \
             . /
           quit
           EOF

@@ -960,6 +960,11 @@ h1 {
 .exp-row .titulo { display: block; font-size: 15.5px; font-weight: 700; }
 .exp-row .detalle { display: block; margin-top: 5px; font-size: 14.5px; color: var(--ink-soft); line-height: 1.6; }
 
+/* Experiencia con enlace: el título lleva al proyecto (→ en el sitio, ↗ a otro sitio) */
+.exp-row a.titulo { display: inline-block; }
+.exp-row a.titulo .ir { color: var(--accent); }
+.exp-row:has(a.titulo:hover) .logo-tile { border-color: var(--accent); }
+
 .stack-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
 
 .stack-tags span {
@@ -1016,9 +1021,6 @@ h1 {
 }
 
 .logo-tile img { display: block; width: 100%; height: 100%; object-fit: contain; }
-
-.what-did .logo-tile { width: 60px; height: 60px; border-radius: 12px; }
-.what-did:hover .logo-tile { border-color: var(--accent); }
 
 /* Perfil con columnas más amplias: experiencia ancha y datos a la derecha */
 .profile-grid.wide { grid-template-columns: minmax(0, 1.9fr) minmax(280px, 1fr); gap: 56px; }
@@ -1096,7 +1098,6 @@ h1 {
   .stack-grid { grid-template-columns: 1fr; gap: 28px; }
   .stack-section { padding-bottom: 48px; }
   .with-logo { gap: 14px; }
-  .what-did .logo-tile { width: 52px; height: 52px; }
 }
 
 /* Metodología (nosotros) */

@@ -33,7 +33,7 @@ function responder($ok, $mensaje, $codigo = 200)
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="robots" content="noindex" />
 <title>Cotización — PanCMdev</title>
-<link rel="stylesheet" href="/styles.css?v=8" />
+<link rel="stylesheet" href="/styles.css?v=9" />
 </head>
 <body>
   <main>
