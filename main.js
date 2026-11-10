@@ -62,7 +62,7 @@ function initReveal() {
   items.forEach((el) => obs.observe(el));
 }
 
-/* Demo de la portada: reservar una hora la quita de la cara pública
+/* Demo de la portada: reservar una hora la marca en la cara pública
    y la muestra en la agenda privada */
 function initDemo() {
   const demo = document.querySelector('[data-demo]');
@@ -90,7 +90,7 @@ function initDemo() {
     }).join('');
 
     msgEl.textContent = elegida
-      ? `Reservaste el martes 3 a las ${elegida}. Esa hora ya no aparece disponible para nadie más.`
+      ? `Reservaste el martes 3 a las ${elegida}. Ya está en la agenda privada y nadie más puede tomarla.`
       : 'Elige un horario y mira cómo aparece al otro lado.';
     resetEl.hidden = elegida === null;
   };
@@ -133,10 +133,62 @@ function initContactForm() {
   });
 }
 
+/* Formulario de cotización: lo envía a cotizar.php sin salir de la página.
+   Sin JS se envía igual y cotizar.php responde con una página propia. */
+function initQuoteForm() {
+  const form = document.querySelector('[data-quote-form]');
+  if (!form) return;
+
+  /* "Otros": escribir en el campo marca la casilla, y marcarla lleva al campo */
+  const otros = form.querySelector('[data-otros]');
+  const otrosTexto = form.querySelector('[data-otros-texto]');
+  if (otros && otrosTexto) {
+    otrosTexto.addEventListener('input', () => { otros.checked = otrosTexto.value.trim() !== ''; });
+    otros.addEventListener('change', () => { if (otros.checked) otrosTexto.focus(); });
+  }
+
+  if (!window.fetch) return;
+  const msgEl = form.querySelector('[data-form-msg]');
+  const boton = form.querySelector('button[type="submit"]');
+
+  const mostrar = (tipo, texto) => {
+    msgEl.className = `form-msg ${tipo}`;
+    msgEl.textContent = texto;
+  };
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    boton.disabled = true;
+    mostrar('', 'Enviando…');
+
+    let datos = null;
+    try {
+      const resp = await fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { Accept: 'application/json' }
+      });
+      try { datos = await resp.json(); } catch (err) {}
+      if (resp.ok && datos && datos.ok) {
+        form.reset();
+        mostrar('ok', 'Listo, recibimos tu solicitud. Te respondemos en 48 horas al correo que nos dejaste.');
+        return;
+      }
+    } catch (err) {}
+    finally {
+      boton.disabled = false;
+    }
+
+    const motivo = (datos && datos.error) || 'No pudimos enviar el formulario.';
+    mostrar('error', `${motivo} Si sigue fallando, escríbenos a contacto@pancmdev.cl.`);
+  });
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   initTheme();
   initRail();
   initReveal();
   initDemo();
   initContactForm();
+  initQuoteForm();
 });

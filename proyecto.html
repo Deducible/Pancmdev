@@ -8,14 +8,14 @@
 <link rel="icon" type="image/png" sizes="32x32" href="src/assets/favicon-32.png" />
 <link rel="icon" type="image/png" sizes="48x48" href="src/assets/favicon-48.png" />
 <link rel="apple-touch-icon" href="src/assets/apple-touch-icon.png" />
-<title>Plataforma de reservas para psicólogos — PanCMdev</title>
-<meta name="description" content="Reserva de horas en línea, portal del paciente y panel del profesional para consultas de psicología. React, Express y PostgreSQL. Recorre la demo." />
+<title>Demo: reservas y panel para un centro de psicología — PanCMdev</title>
+<meta name="description" content="Prueba una demo completa hecha por PanCMdev: sitio con reserva de horas, portal del paciente y panel del profesional para un centro de psicología ficticio." />
 <link rel="canonical" href="https://pancmdev.cl/proyecto.html" />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="PanCMdev" />
 <meta property="og:locale" content="es_CL" />
-<meta property="og:title" content="Plataforma de reservas para psicólogos — PanCMdev" />
-<meta property="og:description" content="Reserva de horas en línea, portal del paciente y panel del profesional para consultas de psicología. React, Express y PostgreSQL. Recorre la demo." />
+<meta property="og:title" content="Demo: reservas y panel para un centro de psicología — PanCMdev" />
+<meta property="og:description" content="Prueba una demo completa hecha por PanCMdev: sitio con reserva de horas, portal del paciente y panel del profesional para un centro de psicología ficticio." />
 <meta property="og:url" content="https://pancmdev.cl/proyecto.html" />
 <meta property="og:image" content="https://pancmdev.cl/src/assets/og-pancmdev.png" />
 <meta property="og:image:width" content="1200" />
@@ -23,7 +23,7 @@
 <meta property="og:image:alt" content="PanCMdev: tu negocio tiene dos caras, construimos las dos." />
 <meta name="twitter:card" content="summary_large_image" />
 <link rel="preload" href="src/fonts/manrope-latin.woff2" as="font" type="font/woff2" crossorigin />
-<link rel="stylesheet" href="styles.css?v=5" />
+<link rel="stylesheet" href="styles.css?v=9" />
 </head>
 <body>
 
@@ -31,10 +31,11 @@
     <header class="site">
       <a href="/" class="logo" aria-label="PanCMdev, inicio">
         <img class="logo-img only-light" src="src/assets/pancm-logo-172.webp" alt="" width="68" height="38" />
-        <img class="logo-img only-dark" src="src/assets/pancm-logo-oscuro-172.webp" alt="" width="68" height="38" />
+        <img class="logo-img only-dark" src="src/assets/pancm-logo-oscuro-172.webp" alt="" width="68" height="38" loading="lazy" />
         <span class="tag">Desarrollo de software</span>
       </a>
       <nav class="main">
+        <a href="servicios.html">Servicios</a>
         <a href="proyectos.html">Proyectos</a>
         <a href="equipo.html">Equipo</a>
         <a href="nosotros.html">Metodología</a>
@@ -49,16 +50,16 @@
     <main>
       <section style="padding:56px var(--gutter) 32px">
         <a href="proyectos.html" class="back-link">← Proyectos</a>
-        <div class="eyebrow" style="margin-top:22px">Caso de estudio</div>
+        <div class="eyebrow" style="margin-top:22px">Proyecto demo</div>
         <h1 class="case-hero-title">Centro de Psicología Clínica</h1>
-        <p class="case-lead">Plataforma web para consultas de psicología: sitio público con reserva de horas, portal del paciente y panel del profesional. La demo corre en el navegador con datos ficticios, así que se puede recorrer completa.</p>
-        <a href="https://centro-psicologia-demo.pages.dev/" target="_blank" rel="noopener noreferrer" class="case-url">centro-psicologia-demo.pages.dev ↗</a>
+        <p class="case-lead">Un proyecto completo para un centro de psicología ficticio, hecho para mostrar cómo trabajamos: el sitio donde los pacientes reservan, su portal y el panel donde el profesional administra todo. Corre en el navegador con datos de ejemplo, así que puedes recorrerlo entero.</p>
+        <a href="https://centro-psicologia-demo.pages.dev/" target="_blank" rel="noopener noreferrer" class="case-url">Probar la demo ↗</a>
         <a href="https://github.com/Deducible/Centro-psicologia-demo" target="_blank" rel="noopener noreferrer" class="case-url" style="margin-left:24px">Código en GitHub ↗</a>
       </section>
 
       <section class="stat-grid">
         <div class="stat-box"><div class="label">Año</div><div class="value">2026</div></div>
-        <div class="stat-box"><div class="label">Rol</div><div class="value">Diseño y desarrollo</div></div>
+        <div class="stat-box"><div class="label">Equipo</div><div class="value">3 desarrolladores</div></div>
         <div class="stat-box"><div class="label">Stack</div><div class="value">React · Express · Postgres</div></div>
         <div class="stat-box"><div class="label">Estado</div><div class="value green">Demo en línea</div></div>
       </section>
@@ -68,37 +69,117 @@
       </section>
 
       <section style="padding:0 var(--gutter) 64px">
+        <div class="section-head">
+          <h2>Qué incluye</h2>
+        </div>
         <div class="feature-grid">
           <div>
-            <h2>El paciente reserva solo</h2>
+            <h3>El paciente reserva solo</h3>
             <p>Elige servicio, día y modalidad según la disponibilidad real de la agenda.</p>
           </div>
           <div>
-            <h2>Portal del paciente</h2>
+            <h3>Portal del paciente</h3>
             <p>Citas, documentos, recursos, comunidad, opiniones por servicio y tickets de ayuda.</p>
           </div>
           <div>
-            <h2>Panel del profesional</h2>
+            <h3>Panel del profesional</h3>
             <p>Agenda semanal, bloqueos de fechas, pacientes y pagos, invitaciones y métricas del consultorio.</p>
           </div>
           <div>
-            <h2>Cuentas y correos</h2>
+            <h3>Cuentas y correos</h3>
             <p>Registro con verificación por código y correos transaccionales con plantillas propias.</p>
           </div>
+        </div>
+      </section>
+
+      <section style="padding:0">
+        <div class="section-head" style="padding:0 var(--gutter)">
+          <h2>Cómo está hecho</h2>
+        </div>
+        <div style="border-top:1px solid var(--border)">
+          <div class="phase-row">
+            <span class="fase">Frontend</span>
+            <span>
+              <span class="titulo">React, Vite y Tailwind</span>
+              <span class="detalle">Interfaz y diseño UI/UX propios para el sitio público, el portal del paciente y el panel del profesional.</span>
+            </span>
+          </div>
+          <div class="phase-row">
+            <span class="fase">API</span>
+            <span>
+              <span class="titulo">Express y Prisma sobre PostgreSQL</span>
+              <span class="detalle">API REST con la base de datos en Neon. Los documentos de los pacientes se guardan en Cloudflare R2.</span>
+            </span>
+          </div>
+          <div class="phase-row">
+            <span class="fase">Seguridad</span>
+            <span>
+              <span class="titulo">Sesiones con JWT y verificación por código</span>
+              <span class="detalle">Al registrarse, la cuenta se confirma con un código que llega por correo.</span>
+            </span>
+          </div>
+          <div class="phase-row">
+            <span class="fase">Despliegue</span>
+            <span>
+              <span class="titulo">GitHub Actions</span>
+              <span class="detalle">Integración y despliegue automáticos (CI/CD) en cada cambio. La demo pública simula la API en el navegador, por eso se puede recorrer con datos de ejemplo.</span>
+            </span>
+          </div>
+        </div>
+      </section>
+
+      <section style="padding:56px var(--gutter) 0">
+        <div class="section-head">
+          <h2>Quién lo hizo</h2>
+          <a href="equipo.html">Ver el equipo →</a>
+        </div>
+        <div style="border-top:1px solid var(--border)">
+          <a href="hector-olivares-rifo.html" class="what-did">
+            <span>
+              <span class="title">Héctor Olivares Rifo</span>
+              <span class="aporte">Front-end y diseño UI/UX de la interfaz.</span>
+            </span>
+            <span class="year">Perfil →</span>
+          </a>
+          <a href="bastian-orellana.html" class="what-did">
+            <span>
+              <span class="title">Bastián Orellana Colignon</span>
+              <span class="aporte">Frontend, API con Express y Prisma, autenticación y CI/CD.</span>
+            </span>
+            <span class="year">Perfil →</span>
+          </a>
+          <a href="tomas-gonzalez.html" class="what-did">
+            <span>
+              <span class="title">Tomás González Rodríguez</span>
+              <span class="aporte">Desarrollo full-stack.</span>
+            </span>
+            <span class="year">Perfil →</span>
+          </a>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-head">
+          <h2>¿Quieres algo así para tu negocio?</h2>
+        </div>
+        <p class="lead" style="margin-top:0">Lo hacemos a medida, con tu marca, tus servicios y tu forma de trabajar: el sitio para tus clientes y el sistema de administración para ti.</p>
+        <div class="actions">
+          <a href="servicios.html#cotizar" class="btn">Cotiza tu proyecto</a>
+          <a href="https://centro-psicologia-demo.pages.dev/" target="_blank" rel="noopener noreferrer" class="btn-outline">Probar la demo ↗</a>
         </div>
       </section>
     </main>
 
     <footer class="site">
       <span class="brand">
-        <img class="only-light" src="src/assets/pancm-logo-172.webp" alt="" width="46" height="26" />
-        <img class="only-dark" src="src/assets/pancm-logo-oscuro-172.webp" alt="" width="46" height="26" />
+        <img class="only-light" src="src/assets/pancm-logo-172.webp" alt="" width="46" height="26" loading="lazy" />
+        <img class="only-dark" src="src/assets/pancm-logo-oscuro-172.webp" alt="" width="46" height="26" loading="lazy" />
         PanCMdev · Desarrollo de software · Chile
       </span>
       <a href="mailto:contacto@pancmdev.cl">contacto@pancmdev.cl</a>
     </footer>
   </div>
 
-  <script src="main.js?v=4"></script>
+  <script src="main.js?v=5"></script>
 </body>
 </html>

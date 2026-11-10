@@ -23,7 +23,7 @@
 <meta property="og:image:alt" content="PanCMdev: tu negocio tiene dos caras, construimos las dos." />
 <meta name="twitter:card" content="summary_large_image" />
 <link rel="preload" href="src/fonts/manrope-latin.woff2" as="font" type="font/woff2" crossorigin />
-<link rel="stylesheet" href="styles.css?v=5" />
+<link rel="stylesheet" href="styles.css?v=9" />
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -50,13 +50,13 @@
         {
           "@type": "Person",
           "@id": "https://pancmdev.cl/bastian-orellana.html#person",
-          "name": "Bastián Orellana",
+          "name": "Bastián Orellana Colignon",
           "url": "https://pancmdev.cl/bastian-orellana.html"
         },
         {
           "@type": "Person",
           "@id": "https://pancmdev.cl/tomas-gonzalez.html#person",
-          "name": "Tomás González",
+          "name": "Tomás González Rodríguez",
           "url": "https://pancmdev.cl/tomas-gonzalez.html"
         }
       ]
@@ -81,10 +81,11 @@
     <header class="site">
       <a href="/" class="logo" aria-label="PanCMdev, inicio">
         <img class="logo-img only-light" src="src/assets/pancm-logo-172.webp" alt="" width="68" height="38" />
-        <img class="logo-img only-dark" src="src/assets/pancm-logo-oscuro-172.webp" alt="" width="68" height="38" />
+        <img class="logo-img only-dark" src="src/assets/pancm-logo-oscuro-172.webp" alt="" width="68" height="38" loading="lazy" />
         <span class="tag">Desarrollo de software</span>
       </a>
       <nav class="main">
+        <a href="servicios.html">Servicios</a>
         <a href="proyectos.html">Proyectos</a>
         <a href="equipo.html">Equipo</a>
         <a href="nosotros.html">Metodología</a>
@@ -104,13 +105,13 @@
           <h1>Tu negocio tiene dos caras. Construimos las dos.</h1>
           <p class="lead" data-rise>El sitio donde tus clientes reservan y el panel privado donde tú administras todo. Una sola agenda, un solo equipo, sin planillas ni mensajes sueltos.</p>
           <div class="actions" data-rise style="--d:.08s">
-            <a href="proyecto.html" class="btn">Ver caso de estudio</a>
-            <a href="equipo.html" class="btn-outline">Conocer al equipo</a>
+            <a href="servicios.html#cotizar" class="btn">Cotiza tu proyecto</a>
+            <a href="proyecto.html" class="btn-outline">Prueba la demo</a>
           </div>
         </div>
         <div class="brand-panel">
           <img class="only-light" src="src/assets/pancm-logo.webp" srcset="src/assets/pancm-logo-480.webp 480w, src/assets/pancm-logo.webp 900w" sizes="(max-width: 560px) calc(100vw - 96px), 440px" alt="Logo de PanCMdev" width="900" height="504" />
-          <img class="only-dark" src="src/assets/pancm-logo-oscuro.webp" srcset="src/assets/pancm-logo-oscuro-480.webp 480w, src/assets/pancm-logo-oscuro.webp 900w" sizes="(max-width: 560px) calc(100vw - 96px), 440px" alt="" width="900" height="504" />
+          <img class="only-dark" src="src/assets/pancm-logo-oscuro.webp" srcset="src/assets/pancm-logo-oscuro-480.webp 480w, src/assets/pancm-logo-oscuro.webp 900w" sizes="(max-width: 560px) calc(100vw - 96px), 440px" alt="" width="900" height="504" loading="lazy" />
         </div>
       </section>
 
@@ -142,12 +143,12 @@
             <div class="agenda" data-agenda></div>
           </div>
         </div>
-        <p class="demo-note">Demo ilustrativa del sistema que construimos para el Centro de Psicología Clínica: una hora reservada deja de estar disponible en el mismo instante, por eso no existe la doble reserva.</p>
+        <p class="demo-note">Así funciona la agenda de nuestra demo para un centro de psicología: cuando alguien reserva una hora, deja de estar disponible para los demás en ese mismo instante. Por eso no hay doble reserva.</p>
       </section>
 
       <section class="section band" data-reveal>
         <div class="section-head">
-          <h2>Caso de estudio</h2>
+          <h2>Proyecto demo</h2>
           <a href="proyectos.html">Todos los proyectos →</a>
         </div>
         <a href="proyecto.html" class="case-feature">
@@ -163,9 +164,9 @@
           </div>
           <div class="body">
             <div class="info">
-              <div class="meta">2026 · Salud · Plataforma de gestión</div>
+              <div class="meta">2026 · Demo · Sitio y sistema de administración</div>
               <h3>Centro de Psicología Clínica</h3>
-              <p>Sitio público con reserva de horas, portal del paciente y panel del profesional para consultas de psicología. Demo en línea con datos ficticios.</p>
+              <p>Un proyecto completo para un centro de psicología ficticio: sitio con reserva de horas, portal del paciente y panel del profesional. Pruébalo con datos de ejemplo.</p>
             </div>
             <span class="status-pill">Demo en línea</span>
           </div>
@@ -183,21 +184,21 @@
               <img class="avatar" src="src/assets/hector-olivares.webp" alt="Héctor Olivares Rifo" width="56" height="56" />
               <div class="name">Héctor Olivares Rifo</div>
             </div>
-            <div class="role">Web y Software Developer Full-Stack</div>
+            <div class="role">Desarrollo full-stack</div>
             <div class="link">Ver perfil →</div>
           </a>
           <a class="member-card" href="bastian-orellana.html">
             <div class="who">
-              <img class="avatar" src="src/assets/bastian-orellana.webp" alt="Bastián Orellana" width="56" height="56" />
-              <div class="name">Bastián Orellana</div>
+              <img class="avatar" src="src/assets/bastian-orellana.webp" alt="Bastián Orellana Colignon" width="56" height="56" />
+              <div class="name">Bastián Orellana Colignon</div>
             </div>
             <div class="role">Desarrollo full-stack</div>
             <div class="link">Ver perfil →</div>
           </a>
           <a class="member-card" href="tomas-gonzalez.html">
             <div class="who">
-              <div class="pin"></div>
-              <div class="name">Tomás González</div>
+              <img class="avatar" src="src/assets/tomas-gonzalez.webp" alt="Tomás González Rodríguez" width="56" height="56" />
+              <div class="name">Tomás González Rodríguez</div>
             </div>
             <div class="role">Desarrollo full-stack</div>
             <div class="link">Ver perfil →</div>
@@ -208,14 +209,14 @@
 
     <footer class="site">
       <span class="brand">
-        <img class="only-light" src="src/assets/pancm-logo-172.webp" alt="" width="46" height="26" />
-        <img class="only-dark" src="src/assets/pancm-logo-oscuro-172.webp" alt="" width="46" height="26" />
+        <img class="only-light" src="src/assets/pancm-logo-172.webp" alt="" width="46" height="26" loading="lazy" />
+        <img class="only-dark" src="src/assets/pancm-logo-oscuro-172.webp" alt="" width="46" height="26" loading="lazy" />
         PanCMdev · Desarrollo de software · Chile
       </span>
       <a href="mailto:contacto@pancmdev.cl">contacto@pancmdev.cl</a>
     </footer>
   </div>
 
-  <script src="main.js?v=4"></script>
+  <script src="main.js?v=5"></script>
 </body>
 </html>

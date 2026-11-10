@@ -23,7 +23,7 @@
 <meta property="og:image:alt" content="PanCMdev: tu negocio tiene dos caras, construimos las dos." />
 <meta name="twitter:card" content="summary_large_image" />
 <link rel="preload" href="src/fonts/manrope-latin.woff2" as="font" type="font/woff2" crossorigin />
-<link rel="stylesheet" href="styles.css?v=5" />
+<link rel="stylesheet" href="styles.css?v=9" />
 </head>
 <body>
 
@@ -31,10 +31,11 @@
     <header class="site">
       <a href="/" class="logo" aria-label="PanCMdev, inicio">
         <img class="logo-img only-light" src="src/assets/pancm-logo-172.webp" alt="" width="68" height="38" />
-        <img class="logo-img only-dark" src="src/assets/pancm-logo-oscuro-172.webp" alt="" width="68" height="38" />
+        <img class="logo-img only-dark" src="src/assets/pancm-logo-oscuro-172.webp" alt="" width="68" height="38" loading="lazy" />
         <span class="tag">Desarrollo de software</span>
       </a>
       <nav class="main">
+        <a href="servicios.html">Servicios</a>
         <a href="proyectos.html">Proyectos</a>
         <a href="equipo.html">Equipo</a>
         <a href="nosotros.html">Metodología</a>
@@ -50,6 +51,7 @@
       <section style="padding:64px var(--gutter) 72px">
         <h1 style="max-width:17ch">Cuéntanos qué necesitas resolver.</h1>
         <p class="lead" style="max-width:56ch">Respondemos en 48 horas con una propuesta y un plazo estimado. Si el proyecto no es para nosotros, te lo decimos de inmediato.</p>
+        <p class="page-sub wide">¿Quieres cotizar un proyecto? En el <a href="servicios.html#cotizar" class="inline-link">formulario de cotización</a> marcas lo que necesitas y te respondemos con una propuesta.</p>
 
         <div class="contact-grid">
           <div class="contact-box"><div class="label">Correo</div><div class="value"><a href="mailto:contacto@pancmdev.cl">contacto@pancmdev.cl</a></div></div>
@@ -71,14 +73,14 @@
 
     <footer class="site">
       <span class="brand">
-        <img class="only-light" src="src/assets/pancm-logo-172.webp" alt="" width="46" height="26" />
-        <img class="only-dark" src="src/assets/pancm-logo-oscuro-172.webp" alt="" width="46" height="26" />
+        <img class="only-light" src="src/assets/pancm-logo-172.webp" alt="" width="46" height="26" loading="lazy" />
+        <img class="only-dark" src="src/assets/pancm-logo-oscuro-172.webp" alt="" width="46" height="26" loading="lazy" />
         PanCMdev · Desarrollo de software · Chile
       </span>
       <a href="mailto:contacto@pancmdev.cl">contacto@pancmdev.cl</a>
     </footer>
   </div>
 
-  <script src="main.js?v=4"></script>
+  <script src="main.js?v=5"></script>
 </body>
 </html>
